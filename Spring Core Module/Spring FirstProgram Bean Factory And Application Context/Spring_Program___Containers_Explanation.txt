@@ -1,0 +1,57 @@
+=> Package Name :-
+	= Organisation Website : www.google.com
+	= com.google.beans
+	
+	= www.smartprogramming.in --> in.sp.beans
+
+
+=> What is Resource ?
+	-> Whenever we need to load or read any external file/resource i.e. xml file, text file, properties file, image etc then we use Resource
+	-> Resource is an pre-defined interface present in "org.springframework.core.io" package
+	-> Spring framework has provided some implemented classes for Resource interface :-
+		1. ClassPathResource
+		2. URLResource
+		3. InputStreamResource
+		4. ByteArrayResource
+		5. FileSystemResource
+		   etc
+		   
+		   
+=> What is BeanFactory ?
+	-> It is the core interface in the Spring Framework for managing and accessing the beans
+	-> It serves as a "Spring Container" that instantiate, configure, manage bean life cycle etc
+	
+	
+=> What is ApplicationContext ?
+	-> It is the sub-interface of BeanFactory for managing and accessing bean objects
+	-> It serves as a "Spring Container" which provides more functionailites as compared to BeanFactory
+	-> In simple terms we can say that it is an advanced spring container as compared to BeanFactory
+	
+	
+=> Hierarchy of Spring Container :-
+	-> 
+	
+	
+=> Difference between BeanFactory & ApplicationContext ?
+	1. BeanFactory is the core container or fundamental container
+	   ApplicationContext is an advanced spring container which provides all the functionailites of BeanFactory container
+	   
+	2. BeanFactory creates the bean object when we call getBean(-) method and thus it is known as lazy instantiation
+	   ApplicationContext creates the bean object when the container gets started and thus it is known as eager instantiation
+	   
+	3. BeanFactory supports only singleton and prototype scope
+	   ApplicationContext supports singleton, prototype, request, session scopes
+	   
+	4. BeanFactory does not support I18N functionality
+	   ApplicationContext supports I18N functionality
+	   
+	5. BeanFactory does not support AOP and ORM
+	   ApplicationContext supports AOP and ORM
+	   
+	6. BeanFactory does not support annotations
+	   ApplicationContext supports annotations
+	   
+	7. BeanFactory is suitable for Standalone Applications
+	   ApplicationContext is suitable for Enterprise Applications
+	   
+======================================================================================================
