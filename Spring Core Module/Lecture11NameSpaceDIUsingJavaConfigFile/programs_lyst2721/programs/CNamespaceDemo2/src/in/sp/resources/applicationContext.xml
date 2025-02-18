@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    					http://www.springframework.org/schema/beans/spring-beans.xsd">
+    					
+    <bean class="in.sp.beans.Address" id="addrId"
+    	c:houseno="101"
+    	c:city="Chandigarh"
+    	c:pincode="54321" />
+	
+	<bean class="in.sp.beans.Student" id="stdId"
+		c:name="Deepesh"
+		c:rollno="222"
+		c:marks="91.3"
+		c:address-ref="addrId" />
+
+</beans>

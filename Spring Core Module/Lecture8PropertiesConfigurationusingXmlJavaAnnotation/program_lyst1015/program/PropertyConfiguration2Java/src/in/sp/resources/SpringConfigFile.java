@@ -1,0 +1,31 @@
+package in.sp.resources;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import in.sp.beans.Student;
+
+@Configuration
+public class SpringConfigFile
+{
+	@Bean("stdId")
+	public Student createStdObject()
+	{
+		Student std = new Student();
+		
+		std.setName("Deepesh");
+		std.setRollno(222);
+		
+		List<String> list = new ArrayList<String>();
+		list.add("C");
+		list.add("C++");
+		list.add("Java");
+		list.add("Python");
+		std.setSubjects(list);
+		
+		return std;
+	}
+}

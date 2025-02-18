@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    					http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--
+	<bean class="in.sp.beans.Student" id="stdId">
+		<constructor-arg value="Deepesh" />
+		<constructor-arg value="222" />
+		<constructor-arg value="91.4" />
+	</bean>
+	-->
+	
+	<!--
+	<bean class="in.sp.beans.Student" id="stdId"
+		c:name="Deepesh"
+		c:rollno="222"
+		c:marks="91.3" />
+	-->
+	
+	<bean class="in.sp.beans.Student" id="stdId"
+		c:_0="Deepesh"
+		c:_1="222"
+		c:_2="91.3" />
+
+</beans>

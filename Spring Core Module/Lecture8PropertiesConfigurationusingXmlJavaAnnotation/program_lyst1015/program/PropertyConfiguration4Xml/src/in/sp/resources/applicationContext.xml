@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="/in/sp/resources/student.properties" />
+	</bean>
+
+    <bean class="in.sp.beans.Student" id="stdId">
+    	<property name="name" value="${student.name}" />
+    	<property name="rollno" value="${student.rollno}" />
+    	<property name="subjmarks">
+    		<map>
+    			<entry key="C" value="${student.subjmarks.C}" />
+    			<entry key="C++" value="${student.subjmarks.Cpp}" />
+    			<entry key="Java" value="${student.subjmarks.Java}" />
+    			<entry key="Python" value="${student.subjmarks.Python}" />
+    		</map>
+    	</property>
+    </bean>
+
+</beans>

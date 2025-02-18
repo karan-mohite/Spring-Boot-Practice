@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="in.sp.beans.Student" id="stdId">
+    	<property name="name" value="Deepak" />
+    	<property name="rollno" value="111" />
+    	<property name="subjmarks">
+    		<map>
+    			<entry key="C" value="89" />
+    			<entry key="C++" value="85" />
+    			<entry key="Java" value="97" />
+    			<entry key="Python" value="91" />
+    		</map>
+    	</property>
+    </bean>
+
+</beans>
