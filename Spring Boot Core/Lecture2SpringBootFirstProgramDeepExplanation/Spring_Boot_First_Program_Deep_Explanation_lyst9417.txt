@@ -1,0 +1,122 @@
+=> Key components of Springboot Framework :-
+	1. Spring Boot Starters
+	2. Spring Boot Auto-Configurator
+	3. Spring Boot CLI (Command Line Interface)
+	4. Spring Boot Actuators
+	   etc
+	   
+-------------------------------------------------------------------------------
+
+=> Spring Boot Starters :-
+	-> Spring Boot Starters are the "Dependency Descriptors"
+	-> These are the pre-packed dependencies for specific feature. For eg just add one dependency (spring-boot-starter-web) and it will provide all the web features in our application - saving our time and ensuring comtability
+	-> Syntax :-
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>3.2.0</version>
+			</dependency>
+			----
+		</dependencies>
+	
+	-> Spring Boot Starters allow us to add jar files in the classpath
+	-> Spring Boot Starters are divided in 3 main categories :-
+		1. Application Starters
+			= spring-boot-starter
+			= spring-boot-starter-web
+			= spring-boot-starter-jdbc
+			= spring-boot-starter-aop
+			= spring-boot-starter-test
+			= spring-boot-starter-security
+			  etc
+		2. Technical Starters
+			= spring-boot-starter-tomcat
+			= spring-boot-starter-jetty
+			= spring-boot-starter-logging
+			= spring-boot-starter-mail
+			  etc
+		3. Production Starters
+			= spring-boot-starter-actuators
+			= spring-boot-starter-security
+			  etc
+	-> NOTE :
+		= In Spring Boot, all the starters follows the similar name pattern i.e. "spring-boot-starter-*"
+		= "spring-boot-starter" name is reserved for official spring boot artifacts
+	-> There are many third party starters which we can include in our application
+	-> Third party starters follows the below name pattern :-
+		= projectname-spring-boot-starter
+		
+-------------------------------------------------------------------------------
+
+=> Spring Boot Auto-Configurator :-
+	-> Spring Boot Auto-Configurator, automatically configures the spring boot application configurations based on the jar dependencies that we have added
+	-> All auto-configuration logic is implemented in "spring-boot-autoconfigure.jar"
+	-> Spring Boot Auto-Configurator provides one annotation to provide auto configurations i.e. @SpringBootApplication
+		= @SpringBootApplication = @Configuration + @ComponentScan + @EnableAutoConfiguration
+		
+======================================================================================================================
+
+=> Different ways to develop Spring Boot Applications :-
+	1. Using Maven Project in Eclipse
+	2. Installing STS tool in Eclipse
+	3. Using STS (Spring Tool Suit) IDE
+	4. Using Springboot Initializr
+	5. Using Springboot CLI (Command Line Interface)
+	
+---------------------------------------------------------------------------
+
+=> Steps to create Spring Boot First Application :-
+	1. Create Maven project
+	2. Provide starter (if you want to create simple desktop application then use spring-boot-starter or if you want to create web application then use spring-boot-starter-web)
+	3. Create main class (MainApp) in any one package (in.sp.main)
+	4. Annotate the main class (MainApp) with @SpringBootApplication annotation
+	5. Create main method and run the spring boot application by SpringApplication.run(-,-);
+	
+======================================================================================================================
+
+=> @SpringBootApplication :-
+	-> This annotation is used to simplify the configuration and bootstrap the setup of a spring boot application
+	-> Below are the points for @SpringBootApplication :-
+		1. Combines Annotation
+			= Combines three essential annotations into one:
+				- @Configuration : Marks the class as a source of bean definitions
+				- @ComponentScan : Activates Spring Boot's auto-configuration
+				- @EnableAutoConfiguration : Enables component scanning for Spring-managed components
+		2. Single annotation for multiple use cases
+			= Using @SpringBootApplication simplifies the setup of a Spring Boot application by providing a concise way to enable essential features and defaults. It reduces the need for multiple annotations.
+		3. Convenient entry point
+			= @SpringBootApplication is commonly placed on the main class of a Spring Boot application. This main class serves as the entry point for the application
+		4. Opinionted Defaults
+			= Spring Boot follows the principle of convention over configuration, providing opinionated defaults that work well for most applications. @SpringBootApplication leverages these defaults to get an application up and running quickly.
+	-> NOTE :-
+		= We mostly use @SpringBootApplication only one time in our application
+		
+======================================================================================================================
+
+=> Tasks performed by run() method :-
+	-> Below are the tasks performed by run() method :-
+		1. Initialize SpringApplication
+			= The run() method starts by creating a SpringApplication instance.
+		2. Configure Application Context
+			= It configures the application context based on classpath, dependencies, and external configurations.
+		3. Load External Configurations
+			= External configurations are loaded during this phase.
+		4. Scan and Register Beans
+			= Component scanning and bean registration happen here.
+		5. Apply Auto-Configuration
+			= Auto-configuration is applied to configure common features.
+		6. Start the Embedded Web Server (if applicable)
+			= The embedded web server (if present) is started here.
+		7. Run the Application Runners
+			= The run() method executes beans implementing ApplicationRunner or CommandLineRunner interfaces, often used for tasks after application startup.
+		8. Display Application Information
+			= Application information like banner and active profiles is displayed.
+		9. Return the ApplicationContext
+			= The fully initialized ApplicationContext is returned.
+		10. Graceful Shutdown
+			= While hooks for graceful shutdown are set up, the actual shutdown process is typically initiated externally (e.g., by a signal or request).
+		11. Handle Application Events
+			= Application events are handled throughout the run() method's lifecycle, not just at the end.
+		
+======================================================================================================================

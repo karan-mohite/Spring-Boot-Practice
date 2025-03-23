@@ -1,0 +1,31 @@
+=> SLF4J (Simple Logging Facade for Java) :-
+	-> It is a facade or abstraction layer for various logging frameworks i.e. Java Logging API, Log4j, Logback, Tinylog etc
+	-> It serves as a bridge or facade to other logging frameworks and thus developers are allowed to choose and switch between different logging implementations without changing their code
+	
+	-> Levels in SLF4J :-
+		= SLF4J doesnt directly define any logging levels. Instead, it provides interfaces for logging frameworks to implement their own levels
+		= However, most framework tat bind to SLF4J use the common standard levels :-
+			1. ERROR (highest value)	- error()
+			2. WARN						- warn()
+			3. INFO						- info()
+			4. DEBUG					- debug()
+			5. TRACE (lowest value)		- trace()
+		= NOTE : These levels are defined in the "ch.qos.logback.classic.Level" class, which is commonly used by Logback, a popular SLF4J binding
+		
+	-> Important :-
+		= SLF4J can perform logging using its built-in implementation, but its generally recommended to use SLF4J in conjection with a dedicated logging framework like Java Logging API, Log4j, Logback, Tinylog etc
+		
+	-> Jar Files Dependencies :-
+		= To achieve logging using SLF4J we have to add 2 jar files :-
+			>> slf4j-api-xxx.jar
+			>> slf4j-simple-xxx.jar
+		= To achieve logging using Java Logging API with SLF4J we have to add 2 jar files :-
+			>> slf4j-api-xxx.jar
+			>> slf-jdk14-xxx.jar
+		= To achieve logging using Log4j with SLF4J we have to add 4 jar files :-
+			>> slf4j-api-xxx.jar
+			>> log4j-slf4j-impl-xxx.jar
+			>> log4j-api-xxx.jar
+			>> log4j-core-xxx.jar
+			
+======================================================================================================================

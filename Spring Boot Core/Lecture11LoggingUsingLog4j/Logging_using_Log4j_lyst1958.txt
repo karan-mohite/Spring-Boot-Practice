@@ -1,0 +1,73 @@
+=> Log4j (Logging 4 Java) :-
+	-> Log4j is an open source logging framework for java applications
+	-> Log4j was developed by Apache Software Foundation in 2001
+	
+	-> It helps the developers to record the information about the application activities i.e. application general flow, errors, warning etc. Then this information is stored in the log files which can be analysed later for debugging, performance motering and troubleshotting purposes.
+	
+	-> Features of Log4j :-
+		1. Flexibility :
+			= It supports various logging levels (debug, info, error etc), log destinations (files, database, network etc) and formatting options
+		2. Configurations :-
+			= We can provide the Log4j configurations separately (properties, xml files etc) so that we dont need to recompile or redeploy our applications
+		3. Performance :-
+			= Its performance is very effective as compared to other logging frameworks
+		etc
+		
+	-> Components of Log4j :-
+		= There are 3 main components of Log4j :-
+			i. Logger
+			ii. Appender
+			iii. Layouts
+			
+	-> NOTE :-
+		= We have to provide the jars or dependency i.e. log4j-api-xxx.jar and log4j-core-xxx.jar
+		= Use the latest version of Log4j because it removes "Log4Shell Vulnerability"
+		
+--------------------------------------------------------------------------------
+
+i. Logger :-
+	-> It is an object which is used to generate the log messages
+	-> Levels of Logger object :-
+		1. OFF (highest value)
+		2. FATAL						- fatal()
+		3. ERROR						- error()
+		4. WARN							- warn()
+		5. INFO							- info()
+		6. DEBUG						- debug()
+		7. TRACE (lowest value)			- trace()
+		
+		
+ii. Appender :-
+	-> It is an object which determines where the log messages are sent for storage or display purpose
+	-> Some appenders are :-
+		1. ConsoleAppender
+		2. FileAppender
+		3. RollingFileAppender
+		4. RandomeAccessFileAppender
+		5. WriterAppender
+		6. JDBCAppender
+		7. SocketAppender
+		8. SyslogAppender
+		9. SMTPAppender
+		10. MongoDBAppender
+		    etc
+			
+
+iii. Layouts :-
+	-> Layouts acts as a bridge between loggers and appenders, controlling the output format
+	-> They formats the content of log messages before they are sent to the appenders
+	-> Some layouts are :-
+		1. PatternLayout
+		2. HtmlLayout
+		3. XmlLayout
+		4. JsonLayout
+		
+====================================================================================================================
+
+=> Log4Shell Vulnerability :-
+	-> Log4Shell (CVE-2021-44228) is a critical Remote Code Execution (RCE) vulnerability in the Apache Log4j logging library where an attacker cab take control of the system and do all sort of nasty things like steal private information, install harmful software or even crash our syste, completely
+	-> It was privately reported t0 the Apache Software Foundation on 24th November 2021 and publically disclosed on 10th December 2021
+	-> Since then millions of java projects were potentially vulnerated by using Log4j library
+	-> But in latest version of Log4j this was totally fixed
+	
+====================================================================================================================

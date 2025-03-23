@@ -1,0 +1,19 @@
+=> Stereotype Annotations :-
+	-> Stereotype annotations are used to indicate the roles of classes in the application
+	-> They offer default behaviour and simplify dependency injection for specific roles
+	-> Spring boot automatically detects and manages classes annotated with stereotypes during auto-configurations
+	-> Stereotype annotations improve code readability and maintability
+	-> Most commonly used stereotype annotations are :-
+		1. @Component
+			= It is generic annotation for any Spring bean managed by the container
+		2. @Service
+			= It marks tghe class that implements business logic and exposes services
+		3. @Repository
+			= It identifies a class for data access functionality i.e. interacting with database
+		4. @Controller
+			= It denotes a class responsible for handling web requests and responding with views
+		5. @RestController
+			= It is similar to @Controller but specializes in returning data in JSON or other formats
+		   etc
+		   
+======================================================================================================================

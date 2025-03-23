@@ -1,0 +1,82 @@
+=> Dependency Management in Spring Boot :-
+	-> In typical java project, managing dependencies i.e. downloading JAR files, ensuring compatability and resolving transitive dependencies manually is very complex process
+	-> Spring boot simiplifies this process of dependency management by automatic process (convention over configuration approach)
+	-> Advantages of Dependency Management :-
+		1. Simplified Configuration
+			= Spring Boot uses a convention over configuration approach, reducing the need for extensive configuration. It follows sesible defaults and provides a consistent wat to manage dependencies
+		2. Version Compatability
+			= Spring Boot provides predefined versions for many commonly used libraries. This helps in maintaing version compatability across the project reducing the conflicts and ensuing a stable enviorment
+		3. Transitive Dependency Resolution :-
+			= Spring boot dependency management includes the ability to manage trabsitive dependencies ensuring that all required dependencues are included without manual intervention
+		4. Centralized Management :-
+			= Spring Boot allows us to declare dependencies in a centralized manner using the pom.xml file. This makes it easier to understand and manage the project dependencies
+	-> To achieve dependency management in spring boot we have to use following :-
+	-> Dependency Management Strategies for Spring Boot are as follows :-
+		1. Build and Dependency Management Tool :-
+			= Maven or Gradle are popular build and dependency management tool used for java projects, In maven-based spring boot project, we define dependencies in the pom.xml file. Spring boot provides a parent POM with pre-configured settings, including default dependencies. Maven will then download and manage the specific dependencies
+		2. Spring Boot Starter POM's :-
+			= Spring Boot Starter POM's are the set of opinionated, pre-defind depedency configurations that cater to specific needs such as web development, data ccess, messaging etc. We can include these starters in our project quickly
+		3. Annotation based dependency inclusions:-
+			= We can use annotations like @EnableAutoConfiguration and @SpringBootApplication to trigger the auto configuration and dependencies
+	
+===============================================================================================================
+
+=> What are the different types of POM's that spring boot provides :-
+	1. Spring Boot Starter POM's :-
+		= These are the pre-configured POM;s including common dependencies for different spring boot application types
+		= For example : spring-boot-starter-web, spring-boot-starter-data-jpa etc
+	2. Spring Boot Parent POM :-
+		= It is a specialized parent POM (spring-boot-starter-parent)
+		= It provides default configurations and dependency management information for starter POM's to inherit from
+		= Projects can inherit from this parent POM to gain sensible defaults and centralized management of dependencies, making it easier to maintain and update versions.
+	3. Miscellaneous POMs:
+		= These types of POM's offer specific functionalities outside Starter and Parent categories
+		= For e.g., spring-boot-starter-test, spring-boot-starter-devtools)
+
+===============================================================================================================
+
+=> Spring Boot Parent POM :-
+	-> It is a special POM i.e. spring-boot-starter-parent which serves a parent POM for spring boot application
+	-> It contains default configurations, plugins and commonly used dependencies
+	-> It offers the following key functionalities :-
+		1. Dependency management
+			= It inherits dependency management information from the spring-boot-dependencies BOM (Bill of Materials). This ensures consistent and compatible versions of supported libraries across our project and its dependencies
+		2. Default Configurations :-
+			= It provides pre-configured settings like java compiler version, maven plugins and encoding. These simplifies project setup and reduce boilerplate configurations
+		3. Inheritance :-
+			= We dont directly declare spring-boot-starter-parent as dependency. Spring Boot Starter POM's inherits the configurations and common dependencies from Spring Boot Parent POM
+		4. Customization :-
+			= While offering defaults, we can override configurations inherited from spring-boot-starter-parent in out project's pom if needed
+	-> Syntax :-
+		<parent>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-parent</artifactId>
+			<version>3.2.2</version>
+			<relativePath/> <!-- lookup parent from repository -->
+		</parent>
+
+====================================================================================================================
+
+=> BOM (Bill of Materials) File :-
+	-> BOM is the special POM file used for dependency mangement
+	-> It lists all the dependencies with their exact versions, ensuring compitable versions throughout our spring boot project, simplifing the dependency management
+	-> Spring Boot provides one BOM file i.e. "spring-boot-dependencies"
+
+===================================================================================================================
+
+=> Application Properties File :-
+	-> It is a configuration file in spring boot used to store key-value pairs of application properties
+	-> It serves as a central place to configure various aspects of a spring boot application
+	-> Different types of properties configured in it are :-
+		= Logging configurations
+		= Server configurations
+		= Database configurations
+		= Application name
+		= Profile-specific properties
+		= Security configurations
+		   etc
+	-> It is typically placed in the src/main/resources directory of spring boot project
+
+	-> NOTE : We can also use YAML file (application.yml) for configurations
+
+===================================================================================================================

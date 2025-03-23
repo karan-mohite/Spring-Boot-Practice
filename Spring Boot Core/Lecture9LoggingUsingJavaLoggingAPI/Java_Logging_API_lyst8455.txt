@@ -1,0 +1,42 @@
+=> Java Logging API :-
+	-> Java provides a built-in logging framework which is known as "Java Logging API"
+	
+	-> Java Logging API was introduced in JDK 1.4 version
+	-> It is pre-defined in JDK so we dont need to add any jar file or dependency
+	-> This API is present in "java.util.logging" package
+	
+	-> Components of logging :-
+		= There are 2 main components of logging :-
+			i. Logger
+			ii. Handler
+	
+------------------------------------------------------------------
+
+i. Logger :-
+	-> Logger is an object which is responsible for generating the log messages
+	-> Levels of Logger are :-
+		= SEVERE (Highest Value) - Important
+		= WARNING
+		= INFO
+		= CONFIG
+		= FINE
+		= FINER
+		= FINEST (Lowest Value)
+		
+
+ii. Handler :-
+	-> Handler is an object that receives the log messages from logger and publish them to various destinations i.e. console or log files or database etc
+	-> There are 5 handlers :-
+		1. ConsoleHandler
+		2. FileHandler
+		3. StreamHandler
+		4. SocketHandler
+		5. MemoryHandler
+		
+======================================================================================================================
+
+=> Task :-
+	1. Log the details of how much time my applictation takes to execute for loop from 1 to 10000 int values
+	2. Create calculator app, take user inputs and store every record in log files
+
+======================================================================================================================

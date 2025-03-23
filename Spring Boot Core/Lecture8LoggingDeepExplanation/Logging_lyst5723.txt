@@ -1,0 +1,58 @@
+=> Logging :-
+	-> Logging is the process of tracking or recording the important events or activities that occur during the execution of an application
+	-> These events and activities (known as log messages) are captured and written to the log files which helps the developers or system administrators or support team to monitor the application behaviour, diagnose the issues and track the errors
+	
+	-> Use of logging :-
+		1. Error Tracking and Debugging :-
+			= We can track the errors like form submission error in our application. This helps the developers to identify and debug the issues in the application functionality
+		2. Security Monitering :-
+			= We can track security-related events such as failed to login attempts or unauthorized access attempts
+		3. Auditing and Compliance :-
+			= In some applications, we can log all the financial transactions including the details of transaction, its time, location etc
+		4. Performance Analysis :-
+			= We can track the time taken by our application to perform any event to respond to requests
+		5. System Health Monitoring :-
+			= In server environment we can track the memory usage, CPU load and other metrics
+		6. Deployment and Release Management :-
+			= We can track the version number, time of release of an application etc
+		etc
+		
+	-> Logging process can be used in various fields :-
+		1. Software Development
+			= Web Development
+			= Mobile App Development
+		2. DevOps and Infrastructure :-
+			= Server Applications
+			= Databases
+		3. Networking and Security :-
+			= Firewall and Security Appliances
+			= Networks Servers
+		4. Cloud Computing :-
+			= Cloud Servers
+			= Serverless Computing
+		5. Industrial Automation and IoT :-
+			= Industrial Control Systems
+			= IoT Devices
+		etc
+		
+	-> In logging, we indicates the severity or importance of a log message by using log levels
+	-> Some common log levels are as follows :-
+		= Diagram
+	-> NOTE : Different logging frameworks and API's can have various log levels
+	
+	-> Simple logging process flow :-
+		= Diagram
+		
+	-> There are a lot of frameworks and API's for logging :-
+		1. Java Logging API
+		2. Log4j
+		3. Logback
+		4. Tinylog
+		
+		5. SLF4J (Simple Logging Facade for Java)
+		6. JCL (Jakarta Commons Logging) - [Old Name - Apache Commons Logging]
+		   etc
+		
+		= NOTE : 5th and 6th are logging wrappers
+		
+======================================================================================================================

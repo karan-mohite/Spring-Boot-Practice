@@ -1,0 +1,84 @@
+=> Logback :-
+	-> Logback is an open-source logging framework which is widely used for java applications
+	-> It is the successor to Log4j, which offers improved performance, flexibility, configuration options etc
+	-> It is developed by "QOS.ch" which is the same organization behind SLF4J
+	
+	-> NOTE : It is always preferred to use Logback with SLF4J
+	
+	-> Components of Logback :-
+		1. Logger
+		2. Appender
+		3. Layouts
+		
+-----------------------------------------------------
+
+=> Logger :-
+	-> It is an object which is used to generate log messages
+	-> Logging levels of Logger object are :-
+		1. OFF (disables all the logging)
+		2. ERROR (highest severity)
+		3. WARN
+		4. INFO
+		5. DEBUG
+		6. TRACE (lowest severity)
+		
+
+=> Appender :-
+	-> It is an object which determines where the log messages should be displayed or stored
+	-> Some appenders are :-
+		1. ConsoleAppender
+		2. FileAppender
+		3. RollingFileAppender
+		4. DBAppender
+		5. JDBCAppender
+		6. JMSAppender
+		7. SocketAppender
+		8. SMTPAppender
+		   etc
+		   
+		  
+=> Layouts :-
+	-> Layouts acts as a brighe between logger and appenders, controlling the output format
+	-> They formats the content of log messages before they are sent to the appenders
+	-> Some layouts are :-
+		1. PatternLayout
+		2. HTMLLayout
+		3. XMLLayout
+		4. JSONLayout
+		   etc
+		   
+=====================================================================================================================
+
+=> Logback Configurations :-
+	-> Logback supports
+		= XML-based configuration file
+		= Groovy-based configuration files
+		= Programmatic configuration (less preferred due to hard code)
+		= Property file configurations (indirectly and not preferred)
+	-> Commonly used file names are logback.xml or logback.groovy
+	-> It offers multiple configuration options such as inheritance, inclusion and conditional configurations
+	
+
+=> Jar files needed for logback are :-
+	1. logback-classic-xxx.jar
+	2. logback-core-xxx.jar
+	3. slf4j-api-xxx.jar
+	
+======================================================================================================================
+
+=> RollingFileAppender :-
+	-> It will creates a new log file when the current one reaches a specified size or age
+	-> In this we use 2 main tags :-
+		1. rollingPolicy :-
+			= The rollingPolicy decides what to do with the log files (like renaming, compression, archiving)
+			= Examples are :-
+				- TimeBasedRollingPolicy
+				- SizeAndTimeBasedRollingPolicy
+				- FixedWindowRollingPolicy
+		2. triggeringPolicy :-
+			= The triggeringPolicy decies when to do it (when a new log file should be created)
+			= Examples are :-
+				- SizeBasedTriggeringPolicy
+				- TimeBasedTriggeringPolicy
+				
+======================================================================================================================

@@ -1,0 +1,88 @@
+=> Prerequisites of Spring Boot :-
+	1. Core Java :-
+		= OOP's Concepts
+		= Exception handling
+		= Collections
+	2. Spring Core Module :-
+		= Creating beans and providing configurations
+		= Dependency Injection
+		= Autowiring
+	3. Maven
+	
+==================================================================================================================
+
+=> Spring Boot :-
+	-> Spring Boot is an "open source java framework" that enables developers to efficiently build applications, from simple microservices to complex distributed application with minimal configurations ensuring the speed and efficiency in development
+	-> Spring Boot framework is developed on the top of core spring framework
+	-> In Spring Boot, 'Boot' refers tho the concept of rapidly initiating a spring application by handling all essentials set ups and configurations
+	
+	-> Spring Boot was developed and maintained by Pivotal Software, a leading enterprise software company. The key contributor and project lead is "Phil Sturgeon"
+	-> Spring Boot initial development was started in 2012
+	-> The official public launch took place in 2014 (Spring Boot 1.0.0)
+	
+	-> Spring Boot Equation :-
+		Spring Boot = Spring Framework +
+					  (Auto-Configuration + Convention over Configuration + Starter Dependencies) +
+					  Embedded Servers / Database +
+					  Actuator Endpoints +
+					  Opinionated Defaults +
+					  CLI Tool
+					  
+	-> Advantages of Spring Boot :-
+		1. It minimizes boilerplate code through auto-configuration, starter dependencies, conventions over conditional, property-based settings etc which in turn reduces the developer time and increases the productivity
+		2. It follows an "opinionated" approach, making certain configuration choices for developers, streamlining setup decisions
+		3. It provides embedded HTTP servers (Tomcat, Jetty and Undertow) and an embdded database (H2) for simplified development and testing
+		4. It provides CLI (Command Line Interface) tool to develop and test springboot application from command prompt in an east and quick way
+		5. It can be easily integrated with spring modules i.e. spring jdbc, spring aop, spring security etc
+		6. It provides a lot of plugins to develop and test the springboot application
+		   etc
+		   
+	-> Key components of Springboot Framework :-
+		1. Spring Boot Starters
+		2. Spring Boot Auto-Configurator
+		3. Spring Boot CLI (Command Line Interface)
+		4. Spring Boot Actuators
+		   etc
+		
+=====================================================================================================================
+
+-> Spring Boot Equation :-
+	Spring Boot = Spring Framework +
+				  (Auto-Configuration + Starter Dependencies + Convention over Configuration) +
+				  Embedded Servers / Database +
+				  Actuator Endpoints +
+				  Opinionated Defaults +
+				  CLI Tool
+				  
+----------------------------
+
+=> Auto-Configuration :-
+	-> It is a feature that automatically configures the application based on the project's dependencies. It simply reads the dependencies, then auto-configure our application based on the libraries or dependencies (DB, web etc)
+	-> It is activated by @EnableAutoConfiguration (present in @SpringBootApplication). It enables automatic configurations based on the projects classpath scanning and conditional checks on dependencies
+	
+=> Starter Dependencies :-
+	-> These are the pre-packaged set of dependencies that simplify project configuration by providing a set of libraries which enable developers to quickly set up and bootstrap projects for specific functionalities or use cases
+	-> These are provided in pom.xml file for eg spring-boot-starter-web, spring-boot-starter-jdbc, spring-boot-starter-test etc
+	
+=> Convention over Configuration :-
+	-> It means adopting sensible defaults and conventions, minimizing the need for explicit configurations
+	-> For eg. default package structure, naming conventions etc
+	-> It is achieved by @EnableAutoConfiguration and @ComponentScan (present in @SpringBootApplication)
+	
+=> Embedded Servers / Database :-
+	-> Servers and database are automatically embedded in the spring boot application directly by default configurations and dependencies like spring-boot-starter-web (which includes embedded servers) or spring-boot-starter-jdbc (which includes embedded database)
+	-> We dont need to provide seprate setup or configuration
+	
+=> Actuator Endpoints :-
+	-> These are the powerful tools for monitoring, managing and interacting with our spring boot application
+	-> It can be achieved by including the spring-boot-starter-actuator deoendency in pom.xml file, exposing the endpoints like /actuator/health , /actuator/info etc
+	
+=> Opinionated Defaults :-
+	-> These refers to predefined, sensible configurations and conventions provided by spring boot. For example the default port (8080), default database (H2) configuration, Logging configurations etc
+	-> We can change opinionated defaults by providing our own configurations in the application properties or YAML file, using explicit annotations or implementing custom configuration classes
+	
+=> CLI Tool :-
+	-> It is a command-line tool that faciliates rapid development and testing the spring boot application from command line
+	-> It is command-line tool allowing us to run and manage spring boot application
+	
+======================================================================================================================

@@ -1,0 +1,8 @@
+=> How to download and Install STS IDE :-
+	1. Download STS IDE from Spring Official Website (https://spring.io/tools/)
+	2. Extract the jar file
+		= java -jar jarFileName.jar
+	
+	-> NOTE : STS IDE is some what similar to Eclipse IDE
+	
+==================================================================================================================

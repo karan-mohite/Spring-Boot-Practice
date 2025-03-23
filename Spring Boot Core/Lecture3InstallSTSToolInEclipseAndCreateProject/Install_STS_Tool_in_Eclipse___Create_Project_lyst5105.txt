@@ -1,0 +1,8 @@
+=> Steps to create Spring Boot Application in Eclipse (by installing STS Tool) :-
+	1. Go to help menu and open Eclipse Marketplace option
+	2. Search spring and install Spring Tool 4
+	3. Accept all the terms and conditions and after installing just restart the eclipse
+	4. Create Spring Boot Starter Project (maximum options are same as that of maven project)
+	5. Just provide all the details of project including dependencies and project will be ready
+	
+===================================================================================================================

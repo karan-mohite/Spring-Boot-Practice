@@ -1,0 +1,22 @@
+<configuration>
+
+	<property name="logFolder" value="d:/mylogs/" />
+
+	<root level="info">
+		<appender-ref ref="FILE" />
+	</root>
+	
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${logFolder}app.%d{dd-MM-yyyy}.%i.log</fileNamePattern>
+			<maxFileSize>1KB</maxFileSize>
+		</rollingPolicy>
+		
+		<encoder>
+			<pattern>[%date{dd-MM-yyyy HH:mm:ss.SSS}] [%thread] [%-5level] [%logger] - %msg%n</pattern>
+		</encoder>
+		
+	</appender>
+
+</configuration>

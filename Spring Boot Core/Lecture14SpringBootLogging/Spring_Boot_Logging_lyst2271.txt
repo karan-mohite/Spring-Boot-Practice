@@ -1,0 +1,22 @@
+=> Spring Boot Logging :-
+	-> Spring Boot Logging is the process of capturing and recording events and messages during the execution of a spring boot application for monitoring, debugging and analyzing its behaviour
+	-> Spring Boot supports various logging frameworks for eg. Logback, Log4j, Java Util Logging (JUL) etc
+	-> NOTE : Spring Boot offers extensive support for logging but it doesnt have its own logging implementation
+	
+	-> Spring Boot relies on "SLF4J" as a logging facade and "Logback" as the default logging implementation
+	-> NOTE : Some spring boot components or libraries use "Commons Logging" as a logging facade. But now a days many of these components or libraries are migrating to "SLF4J" for better consistency and compatability
+	-> Some logging levels are as below :-
+		= ERROR (highest severity)
+		= WARN
+		= INFO
+		= DEBUG
+		= TRACE (lowest severity)
+		
+	-> How to achieve logging in Spring Boot :-
+		= To provide default logging settings or configurations (logging level, logging output, format, coloring, logback configurations etc), we have to use one dependency i.e. "spring-boot-starter-logging"
+		= We can override or customize above default logging settings or configurations by :-
+			>> application.properties (present in src/main/resources package)
+			>> logback.xml or logback-spring.xml (placed in src/main/resources package)
+			>> application.yml (placed in src/main/resources package)
+
+======================================================================================================================
