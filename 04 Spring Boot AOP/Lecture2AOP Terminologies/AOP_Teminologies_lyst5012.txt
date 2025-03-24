@@ -1,0 +1,178 @@
+=> Teminologies used in AOP :-
+	1. Cross-cutting concerns
+	2. Aspect
+	3. Advice
+	4. Join-points
+	5. Pointcuts
+	6. Target
+	7. Proxy
+	8. Advisor
+	9. Weaving
+	
+----------------------------------------------------
+
+=> Cross-cutting concerns :-
+	-> A cross-cutting concern is a concept or functionality that is applied to multiple part of our codebase but dont directly belong to any specific business logic
+	-> For example :-
+		= Logging
+		= Security
+		= Transaction Management
+		= Error Handling
+		  etc
+		  
+		  
+=> Aspect :-
+	-> Aspect is a module that encapsulates a specific cross-cutting concern such as logging, security, error handling etc
+	-> It provides services that can be applied to multiple parts of an application
+	-> In Spring Boot AOP, aspects are primarily defined using regular classes annotated with @Aspect and additional annotations (@Pointcut, @Before etc)
+	-> For eg :-
+		@Aspect
+		@Component
+		public class LoggingAspect
+		{
+			//advice methods
+		}
+		
+		
+=> Advice :-
+	-> Advice represents the actual code that implements an aspects behaviour
+	-> This code is executed at designated points in our application called join-points to address cross-cutting concerns
+	-> For example :-
+		= The actual code implementing logging using Java Logging API, Log4j, Logback etc
+		= The actual code implementing security using JAAS (Java Authentication and Authorization Services)
+		= The actual code implementing transactions using JTA (Java Transaction API)
+		  etc
+	-> There are 5 types of advices :-
+		1. Before Advice:
+			= Executes before the target method
+			= Common uses :-
+				>> Input validations
+				>> Setting up resources
+				>> Authorization checks
+			= For this we use "@Before" annotation
+		2. After Advice:
+			= Executes after the target method, regardless of success or failure
+			= Common uses :-
+				>> Clean up actions
+				>> Logging results
+				>> Post-processing
+			= For this we use "@After" annotation
+		3. After Returning Advice:
+			= Executes after the target method succeeds (no exception thrown)
+			= Common uses :-
+				>> Logging success messages
+				>> Sending success notifications
+				>> Updating caches
+			= For this we use "@AfterReturning" annotation
+		4. After Throwing Advice:
+			= Executes after the target method throws an exception
+			= Common uses :-
+				>> Logging errors
+				>> Sending error notifications
+				>> Handling exceptions
+				>> Implementing retry mechanisms
+			= For this we use "@AfterThrowing" annotation
+		5. Around Advice:
+			= Executes both before and after the target method, with the ability to control its execution flow
+			= Common uses :-
+				>> Performance measurement
+				>> Transaction management
+				>> Security checks
+				>> Conditional execution
+			= For this we use "@Around" annotation
+	-> For example :-
+		@Aspect
+		@Component
+		public class LoggingAspect
+		{
+			@Before("-----")	//advice
+			public void beforeLoggingServiceMethod()	//advice method
+			{
+				-------- logging code ---------
+			}
+		}
+		
+		
+=> Join-points :-
+	-> A join-point represents a specific point of a program where advice can be applied
+	-> A join-point can be before or after executing method, before throwing an exception, before or after modifying an instance variable etc
+	-> For example :-
+		class Transactions
+		{
+			public void upiTransaction()
+			{
+				//join-point
+				------business logic------
+				//join-point
+			}
+		}
+		>> NOTE : Join-points are always within the methods, but not necessarily at the exact lines that we have marked above. For example :-
+			class Transactions
+			{
+				public void upiTransaction()
+				{
+					//join-point
+					sendUpiRequest()
+					
+					//join-point
+					updateBalance();
+					
+					//join-point
+					if(transactionFailed())
+					{
+						throw new TransactionException("---message---");
+					}
+				}
+			}
+	-> Join-points exists in application classes (or target class)
+	
+	
+=> Pointcuts :-
+	-> It is the join-point or location where advice is plugged-in or implemented
+	-> For example :-
+		@Aspect
+		@Component
+		public class LoggingAspect
+		{
+			@Before("execution(* in.sp.services.*.*(..))")	//advice and pointcut expression with pointcuts
+			public void beforeLoggingServiceMethod()	//advice method
+			{
+				-------- logging code ---------
+			}
+		}
+		
+		
+=> Target :-
+	-> Target refers to the specific components of code such as classes or methods where we want to apply the advice
+	-> For example :-
+		//target class
+		class Transactions
+		{
+			//target method
+			public void upiTransaction()
+			{
+				//join-point
+				------business logic------
+				//join-point
+			}
+		}
+		
+		
+=> Proxy :-
+	-> Proxy is an object which contains the target object and advice (advisor) details
+	-> We dont explicitly create proxy object by ourself. Spring Boot AOP automatically creates proxy object when necessary based on our aspect configuration (for eg when we apply AOP annotation such as @Aspect)
+	
+	
+=> Advisor :-
+	-> Advisor is a self-contained unit encapsulating both the "advice" and "pointcuts" that defines when that advice should be applied.
+	
+	
+=> Weaving :-
+	-> It is the process of applying the aspect on the target object in order to generate proxy
+	-> Weaving can be achieved at :-
+		= compile time
+		= load time
+		= runtime
+	-> NOTE : Spring Boot AOP performs weaving at runtime
+	
+=====================================================================================================================

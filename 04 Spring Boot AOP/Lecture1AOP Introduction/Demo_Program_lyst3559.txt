@@ -1,0 +1,57 @@
+class MainApp
+{
+	public static void main(String[] args)
+	{
+
+	}
+	public void login()
+	{
+		----- login logic ------
+	}
+}
+
+class Transactions
+{
+	public void upiTransaction()
+	{
+		----- UPI transaction business logic -----
+	}
+	public void internetBankingTransaction()
+	{
+		----- Internet Banking transaction business logic -----
+	}
+	public void mobileBankingTransaction()
+	{
+		----- Mobile banking transaction business logic -----
+	}
+	-
+	-
+}
+
+class MyLogging
+{
+	public void logging()
+	{
+		----- logging service logic -----
+	}
+}
+
+class MySecurity
+{
+	public void security()
+	{
+		----- security service logic -----
+	}
+}
+
+class MySmsService
+{
+	public void smsService()
+	{
+		----- sms service logic -----
+	}
+}
+
+-
+
+-

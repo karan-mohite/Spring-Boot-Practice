@@ -1,0 +1,22 @@
+=> AOP (Aspect Oriented Programming) :-
+	-> Aspect Oriented Programming (AOP) is a "programming paradiam" or "approach" that aims to increase modularity by allowing the separation of cross-cutting concerns
+	-> In traditional OOP, concerns like logging, security, transaction management, sms service, OTP etc tend to be scattered throughout the codebase, making it harder to manage and maintain the project. AOP separate these specific functionalities that "cut across" multiple parts of our codebase and handle them indepdently.
+	-> NOTE : AOP provides complement to OOP to achieve more and clear modularity (it doesnt replace the OOP)
+	
+	-> What is the need of AOP :-
+		= Scenerio : Create a transaction application having multiple ways of transactions i.e. UPI transaction, internet banking transaction, mobile banking transaction, wallet transaction etc. And we also have to apply some concepts i.e. logging, security, OTP, SMS services etc
+		= Problem : If we create the above application using OOP, then we have to face the following problems :-
+			>> Our code is not neat and clean because in business logic we have to provide another type of code i.e. service code
+			>> If we have to change or update any service in business logic method, then it will be difficult because services are scattered throughout the codebase which makes the project difficult to maintain
+		= To resolve these problems we have to use AOP
+		
+	-> Advantages of AOP :-
+		1. It provides more modularity
+		2. It improves maintanability and readability of code
+		3. It reduces the code duplication by applying the aspects to different parts of the application
+		4. It provides loosely coupled design
+		   etc
+		   
+	-> AOP is implemented by a lot of langauges like java, c++, python, php etc
+	
+=======================================================================================================================

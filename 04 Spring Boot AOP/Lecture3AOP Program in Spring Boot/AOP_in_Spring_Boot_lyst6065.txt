@@ -1,0 +1,36 @@
+=> Different ways to achieve AOP in Spring Boot :-
+	1. Annotation Based (mostly used)
+	2. AspectJ (framework) Integration
+	
+	
+=> How to achieve AOP in Spring Boot by Annotations :-
+	-> Below are the steps :-
+		1. We have to provide one dependency i.e. spring-boot-starter-aop
+		2. Create one service class annotated with @Service
+		3. Create aspect class annotated with @Aspect and @Component
+		4. Create advice method with advices (@Before, @After etc) and pointcuts (expression)
+	
+	-> NOTE : In order to enable AOP auto-detection we have to use one annotation i.e. @EnableAspectJAutoProxy
+		
+	
+=====================================================================================================================
+
+=> What is expression in AOP :-
+	-> An expression is a string-based pattern that defines the pointcuts
+	-> We have to provide Pointcut Designators (POD) in the expression to represent different join point types or matching criteria
+	-> Some of the Pointcut Designators (POD) are execution (common), within, this, type etc
+	
+-----------------------------------------------------
+
+=> execution (methodPattern) :-
+	-> Matches the method execution join points
+	-> execution syntax :-
+		1. execution(* in.sp.main.services.TransactionService.upiTransaction())
+		2. execution(* in.sp.main.services.TransactionService.*())
+		3. execution(* in.sp.main.services.*.*())
+		4. execution(* in.sp.main.services.TransactionService.*(..))
+		5. execution(* in.sp.main.services.TransactionService.*(String, ..))
+		6. execution(* *(..))
+		   etc
+		
+====================================================================================================================
