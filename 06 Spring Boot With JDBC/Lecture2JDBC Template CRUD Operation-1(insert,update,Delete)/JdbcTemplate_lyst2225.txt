@@ -1,0 +1,48 @@
+=> JdbcTemplate :-
+	-> It is a central class for JDBC operations in Spring Boot
+	-> Uses of JdbcTemplate class :-
+		1. Simplifies JDBC :-
+			= JdbcTemplate reduces boilerplate JDBC code (steps 1,2,3 and 6) making it readable and concise
+		2. Connection Management :-
+			= JdbcTemplate manages the connections, reducing the need for manual connection handling
+		3. Exception Handling :-
+			= JdbcTemplate automatically translates the database exceptions into Spring's DataAccessExceptions which simplifies the error handling
+		4. SQL execution :-
+			= JdbcTemplate executes the SQL queries i.e. insert, update, delete, select etc
+		5. Batch updates :-
+			= JdbcTemplate provides methods for batch updates, improving performance for bulk database operations
+		etc
+	
+	-> Methods of JdbcTemplate class :-
+		1. update(-)
+			= used for insert, update and delete SQL queries
+		2. query(-)
+		   queryForObject(-)
+		   queryForList(-)
+		   queryForMap(-)
+		   etc
+			= used for select SQL queries
+		3. execute(-)
+			= used for DDL (create, drop, alter etc) SQL queries
+		etc
+			
+----------------------------------------------------------------------------------
+
+=> Steps to executes SQL query using JDBC :-
+	1. Load and register the driver
+		-> CLass.forName("driver-class-name");
+	2. Establish the connection
+		-> Connection con = DriverManager.getConnection("url", "username", "password");
+	3. Create Statement / PreparedStatement / CallableStatement object
+		-> Statement st = con.createStatement();
+		-> PreparedStatement ps = con.prepareStatement();
+		-> CallableStatement cs = con.prepareCall();
+	4. Send and execute SQL query
+		-> int count = ps.executeUpdate();				// used for insert, update and delete
+		-> ResultSet rs = ps.executeQuery();			// used for select
+	5. Process the result
+	6. Close all the resources
+		-> ps.close();
+		-> con.close();
+		
+----------------------------------------------------------------------------------

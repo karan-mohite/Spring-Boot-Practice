@@ -1,0 +1,13 @@
+=> Batch Updates :-
+	-> It is a batch of updates grouped together and sent to the database in one batch rather then sending them one by one
+	-> Advantages :
+		1. Application performance will be improved
+		2. Network traffic will be reduced
+	-> Disadvantages :-
+		1. It can be used for insert, update and delete sql queries but not for select sql queries
+		2. If any single sql query gets an error then it will disturb the flow of the program
+		
+	-> How to achieve Batch Updates in Spring Boot :-
+		= For batch updates in Spring Boot we have to use one method i.e. "batchUpdates()" which is present in JdbcTemplate and NamedParameterJdbcTemplate class
+		
+=======================================================================================================================

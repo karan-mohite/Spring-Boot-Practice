@@ -1,0 +1,10 @@
+=> RowMapper :-
+	-> RowMapper is an interface which is used for mapping the "rows of a relational database Result-Set" to "java objects"
+	-> RowMapper is a callback interface which means it provides a callback method that is invoked for each row in the Result-Set during data retrival
+	-> Method :-
+		>> T mapRow(ResultSet rs, int rowNum) throws SQLException;
+		
+	-> NOTE : 
+		= RowMapper is a functional interface
+		
+======================================================================================================================

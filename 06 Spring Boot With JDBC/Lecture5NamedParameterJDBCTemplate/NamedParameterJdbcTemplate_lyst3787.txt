@@ -1,0 +1,15 @@
+=> NamedParameterJdbcTemplate :-
+	-> It is the class which is provided by Spring Framework as the part of Spring-JDBC module. As Spring Boot is built on the top of Spring Framework, thus we can use NamedParameterJdbcTemplate class in Spring Boot also for JDBC operations
+	
+	-> Why we need NamedParameterJdbcTemplate :-
+		= In JdbcTemplate, we provide "Positional Parameters" which is not user-friendly because if there are a lot of positional parameters then it will create confusion. To remove this confusion we use NamedParameterJdbcTemplate class in which we use "Named Parameter"
+		
+	-> We can provide "Named Parameter" by 2 ways :-
+		1. By using Map <interface>
+			= We can use any implemented class of Map interface i.e. HashMap etc
+		2. By using SqlParameterSource <interface>
+			= We can use any implemented class of SqlParameterSource i.e.
+				a. MapSqlParameterSource
+				b. BeanPropertySqlParameterSource
+				
+=======================================================================================================================

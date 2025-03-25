@@ -1,0 +1,22 @@
+=> Spring Boot JDBC Module :-
+	-> Spring Boot with JDBC provides a streamlined way to connect the spring boot applications with JDBC and execute the SQL queries
+	-> For Spring Boot JDBC applications, we have to include one dependency i.e. "spring-boot-starter-jdbc"
+	-> Some important interfaces and classes provides by "spring-boot-starter-jdbc" are :-
+		1. DataSource <interface>
+		2. JdbcTemplate <class>
+		3. NamedParameterJdbcTemplate <class>
+		   etc
+	
+	-> NOTE :-
+		= Spring Boot JDBC Module builds upon Spring JDBC Module
+		= Spring Boot auto-configures the DataSource, JdbcTemplate and NamedParameterJdbcTemplate beans, reducing manual configurations
+		
+-------------------------------------------------
+
+=> DataSource :-
+	-> DataSource is an interface which is present in "javax.sql" package
+	-> It provides connections to the database and manages connection pooling
+	-> In Spring Boot, DataSource is auto-configured by default based on the application's properties
+	-> DataSource configuration properties can be customized in application.properties or application.yml file
+	
+-------------------------------------------------

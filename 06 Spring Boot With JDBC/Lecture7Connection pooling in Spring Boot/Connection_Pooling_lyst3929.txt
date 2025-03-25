@@ -1,0 +1,6 @@
+=> Connection Pooling in Spring Boot :-
+	-> It is a feature or technique in Spring Boot that involves managing and reusing existing database connection objects in connection pool, instead of creating new connections from scratch every time an application interacts with the database
+	-> How to achieve connection pooling in Spring Boot :-
+		= Spring Boot by default use third-part connection pooling library i.e. HikariCP. Whenever we provide "spring-boot-starter-jdbc" dependency, automatically HikariCP jar file is added in the application and then we can achieve connection pooling in Spring Boot
+		
+======================================================================================================================
