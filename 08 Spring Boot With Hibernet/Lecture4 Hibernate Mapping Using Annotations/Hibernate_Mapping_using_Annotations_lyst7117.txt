@@ -1,0 +1,59 @@
+=> Annotations used for hibernate mapping are :-
+	1. @Entity
+	2. @Table
+	3. @Id
+	4. @Column
+	
+--------------------------------
+
+=> @Entity :-
+	-> The @Entity annotation is used to mark the java class as an entity, indicating that instances of this class will be mapped to rows in a database table
+	-> When we annotate a class with @Entity, hibernate recognizes it as a persistence entity and we can perform database operations (eg. insert, update, delete etc) on instances of this class
+	-> This annotation is used at the class level
+	-> Syntax :-
+		@Entity
+		class ClassName
+		{
+			//class members
+		}
+		
+		
+=> @Table :-
+	-> @Table annotation is used to map the class with database table
+	-> This annotation is used at the class level
+	-> Syntax :-
+		@Entity
+		@Table(name = "table_name")
+		class ClassName
+		{
+			//class members
+		}
+		
+		
+=> @Id :-
+	-> @Id annotation is used to specify the primary key of an entity class. It marks a field as the unique identifier for instances of that entity
+	-> This annotation is used with field (attribute) within the entity class
+	-> Syntax :-
+		@Entity
+		@Table(name = "table_name")
+		class ClassName
+		{
+			@Id
+			private int stdid;
+		}
+		
+		
+=> @Column :-
+	-> @Column is used to map the field with table column
+	-> It is used with fields (attributes) within the entity class
+	-> Syntax :-
+		@Entity
+		@Table(name = "table_name")
+		class ClassName
+		{
+			@Id
+			@Column(name = "column_name")
+			private int stdid;
+		}
+		
+==============================================================================================================

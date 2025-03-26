@@ -1,0 +1,39 @@
+=> Hibernate CRUD Operations :-
+	-> Methods for Hibernate CRUD Operations are :-
+		a. Insert Operation
+			= save()
+			= persist()
+		b. Update Operation
+			= update()
+			= saveOrUpdate()
+		c. Delete Operation
+			= delete()
+		d. Retrieve Operation
+			= get()
+			= load()
+			
+------------------------------------------------------------------------------------------
+
+=> Difference between save() and persist() method :-
+	-> When save() method insert the record in database, it will return primary key of the saved object
+		- Serializable save(Object object);
+	-> When persist() method insert the record in database, it will not return any value
+		- void persist(Object object);
+		
+		
+=> Difference between get() and load() method :-
+	-> get() method:
+		= The get() method is used to retrieve an object from database by its primary key
+		= If the object with the given id is found in the database, it will return the actual object and initalize all the properties with data from database. This is known as "eager loading" or "early loading"
+		= If the object is not found in the database, it will return null object
+	-> load() method:
+		= The load() method also retrieves an object by its primary key but it retrun a proxy object rather than the actual object from database
+		= It will retrieve the values from database only when getter methods are called. This is known as "lazy loading"
+		= If the object is not found in database, it will provide an exception i.e. "ObjectNotFoundException"
+		
+		
+=> Difference between update() and saveOrUpdate() method :-
+	-> update() method will update the record if the row is present in database. If row is not present in database then it will provide an exception
+	-> saveOrUpdate() method is the combination of save() and update() method. It will check wether the object is present in database, if it is present then it will update otherwise it will insert the values or object in database
+	
+==============================================================================================================

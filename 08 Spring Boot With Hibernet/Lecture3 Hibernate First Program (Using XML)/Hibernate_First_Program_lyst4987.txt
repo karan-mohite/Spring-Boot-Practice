@@ -1,0 +1,50 @@
+=> How to create Hibernate First Program :-
+	1. Download and install any one IDE
+	2. Create "Simple Java Project" or "Maven Project"
+	3. Add "hibernate jars" (for Simple Java Project) or "provide dependencies" (for Maven Project)
+	4. Create "POJO class"
+	5. Create "Hibernate Mapping File"
+	6. Create "Hibernate Configuration File"
+	7. Create main class to execute hibernate application
+		
+		7.1 Create "Configuration" class object:
+			-> The Configuration class is used to configure and manage hibernate settings
+			-> How to get Configuration class object:
+				** Configuration cfg = new Configuration();
+			-> Method of Configuration class:
+				** cfg.configure();	// It is used to load hibernate configuration details from an external file
+				
+		7.2 Get "SessionFactory" object:
+			-> SessionFactory is an interface that represents a factory for creating "Session" objects
+			-> It is used to load the configuration details from configuration file, setting up connection pool, manage database connections etc
+			-> How to get SessionFactory object:
+				** SessionFactory sessionFactory = cfg.buildSessionFactory();
+				
+		7.3 Get "Session" object:
+			-> Session is an interface that represents a single unit of work
+			-> It is used to perform database operations
+			-> How to get Session object:
+				** Session session = sessionFactory.openSession();
+			-> Database operations that we can perform using Session object are:
+				a. Insert Operation
+					= save()
+					= persist()
+				b. Update Operation
+					= update()
+					= saveOrUpdate()
+				c. Delete Operation
+					= delete()
+				d. Retrieve Operation
+					= get()
+					= load()
+					
+		7.4 Get "Transaction" object:
+			-> Transaction is an interface that represents database transactions
+			-> It is used to control and manage transactions
+			-> How to get Transaction object:
+				** Transaction transaction = session.getTransaction();
+				   transaction.begin()
+				** Transaction transaction = session.beginTransaction();
+			-> NOTE : In JDBC, AutoCommit default value is "true" and we have to set it to "false" by "con.setAutoCommit(false);" statement. But in hibernate AutoCommit default value is "false"
+			
+==============================================================================================================

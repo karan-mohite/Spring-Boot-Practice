@@ -1,0 +1,11 @@
+=> Code to generate unique id automatically in hibernate :-
+	
+	-> Using Annotation:
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		
+	-> Using XML mapping file:
+		<id name="stdid" column="std_id">
+			<generator class="identity" />
+		</id>
+		
+=============================================================================================================
