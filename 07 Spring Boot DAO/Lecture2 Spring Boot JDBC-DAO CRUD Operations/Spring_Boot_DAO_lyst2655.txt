@@ -1,0 +1,39 @@
+=> Spring Boot DAO :-
+	-> Like Spring DAO, we can achieve DAO design pattern in Spring Boot to encapsulate data access logic, offering CRUD operations on our data entities
+	-> DAO (Data Access Object) refers to the layer responsible for abstracting the data access logic from rest of the application
+	
+	-> NOTE : 
+		= We can achieve Spring Boot DAO with any database or persistence technologies like JDBC, hibernate, JPA etc
+		= Spring Boot itself doesnt introduce a separate DAO concept like Spring provides DAO classes i.e. JdbcDaoSupport, NamedParameterJdbcDaoSupport for JDBC etc. It leverages the broader Spring DAO pattern and integrates ot seamlessly with those persistence technologies
+		
+	-> How to achieve DAO design pattern in Spring Boot ?
+		= We can achieve DAO design pattern by annotations (but there are other ways also which are not recommended) :-
+			1. @Repository (highly recommended)
+			2. @Autowired (optional)
+			3. @Transactional (optional but recommended)
+			
+			4. @Service (not for core DAO)
+			
+---------------------------------------------------------------------------------
+
+1. @Repository :-
+	-> It is used to annotate DAO classes in Spring Boot applications
+	-> It is specialization of @Component annotation, indicating that the annotated class is a repository
+	
+	
+2. @Autowired :-
+	-> It is used for automatic dependency injection
+	-> It helps in injecting dependencies such as DAO instances into other spring-managed component
+	
+	
+3. @Transactional :-
+	-> It is used to manage the transactions in DAO methods
+	-> It helps in maintaing transaction integrity and ensures that operations are either fully completed or rolled back in case of failure
+
+	
+4. @Service :-
+	-> It is used for service layer classes
+	-> It indicates that the annotated class provides business logic and acts as a service component in spring boot application
+	
+
+==============================================================================================================
