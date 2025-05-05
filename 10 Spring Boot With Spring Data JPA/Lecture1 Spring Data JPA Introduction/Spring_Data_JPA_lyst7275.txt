@@ -1,0 +1,58 @@
+=> Till now we have covered following modules for Database Acessability :-
+	= JDBC
+	= Spring Boot with JDBC
+	
+	= Hibernate
+	= Spring Boot with Hibernate
+	
+	= JPA (Java Persistence API)
+	= Spring Boot with JPA
+	
+-> NOTE :-
+	= In above modules, it requires more code for database operations and thus they provides low-level abstraction. Thus Spring Framework started one subproject i.e. "Spring Data" or "Spring Data Access" to simplifies the data access for various database technologies
+	
+===============================================================================================================
+
+=> Spring Data Access :-
+	-> Spring Data Access is the subproject or part of Spring Framework that aims to simplifies data access in Spring Applications by offering high-level abstractions and tools for relational databases, NoSQL databadses etc
+	-> Modules in Spring Data Access are :-
+		1. Spring Data JPA
+			= Focus on relational database access using JPA
+		2. Spring Data MongoDB
+			= Focus on NoSQL database access using MongoDB
+		3. Spring Data Cassandra
+			= Focus on NoSQL database access using Apache Cassandra
+		4. Spring Data Redis
+			= Focus on caching and key-value data storage in Redis
+		5. Spring Data Neo4j
+			= Focus on graph database access using Neo4j
+		etc
+		
+===============================================================================================================
+
+=> Spring Data JPA :-
+	-> Spring Data JPA is the part of larger Spring Data Project which provides a simplified and consistent wat to work with JPA in spring-based application
+	
+	-> Spring Data JPA provides some "Repository Interfaces" which provides a convenient way to perform common database operations without writing the actual database queries or boilerplate code
+	-> Some "Repository Interfaces" present in Spring Data JPA are:
+		1. Repository
+			= It is marker interface which establishes the foundation
+		2. CrudRepository
+			= Used for basic CRUD Operations
+		3. PagingAndSortingRepository
+			= Used when we need sorting and pagination capabilities including CRUD Operations
+		4. JpaRepository
+			= Used for JPA-specific queries using method names, annotations (@Query etc) and Criteria API
+			= It is the default choice for JPA Repositories (mostly used)
+		etc
+		
+	-> Hierarchy of "Repository Interfaces":
+		= Diagram
+		
+	-> All Spring Data JPA Repository Interfaces provides 2 types of methods :-
+		1. Core CRUD Operation Methods
+			= Used for basic data manipulation
+		2. Query Methods
+			= Used to define custom queries using method naming conventions or custom JPQL/SQL queries
+
+===============================================================================================================
