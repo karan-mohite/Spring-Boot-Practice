@@ -1,0 +1,15 @@
+=> JPA CRUD Operation Methods :-
+	>> Insert Operation : persist()
+	>> Retrival Operation : find()
+	>> Update Operation : merge()
+	>> Delete Operation : remove()
+
+
+=> Points to note in JPA :-
+	1. All the CRUD operation methods are used to work with individual record or to perform single record manipulation only
+	2. If we want to work with multiple records (perform manipulations with multiple records) like select, insert, update, delete multiple records then we have to use :-
+		= JPQL (Java Persistence Query Language)
+		= Native SQL
+		= JPA Criteria API (less used)
+		
+==============================================================================================================

@@ -1,0 +1,50 @@
+=> JPA API Interfaces :-
+	1. Query <interface>
+	2. TypedQuery <interface>
+	
+--------------------------------------------------
+
+=> Query :-
+	-> It is the fundamental JPA interface that represents a database query
+	-> It is used to execute dynamic queries including JPQL and Native SQL Queries
+	-> It allows parametrization, result retrival and is used for various querying operations
+	
+	
+=> TypedQuery :-
+	-> It is a specialized subtype of the Query interface of JPA
+	-> It enhances type safety by demanding us to specify the expected result type when creating a query. This ensures that query results are automatically cast to the specified type, reducing the risk of type-related errors
+	-> It is useful when working with entity types in JPA as it eliminates the need for explicitly casting when retriving the results
+	
+===============================================================================================================
+
+=> JPQL (Java Persistence Query Langauge) :-
+	-> JPQL is a query langauge used for querying and manipulating java objects with relational database
+	-> It allows the developers to write the queries in an object-oriented way, treating database records as objects
+	
+	-> Some JPQL queries are as follows :-
+		1. Select Query:
+			= SELECT en FROM EntityName en;
+			= SELECT en FROM EntityName en WHERE en.attribute = :value;
+		2. Update Query:
+			= UPDATE EntityName en SET en.attribute = :newValue WHERE en.id = :entityId;
+		3. Delete Query:
+			= DELETE FROM EntityName en WHERE en.id = :entityId;
+			
+	-> NOTE :-
+		= There is no INSERT query in JPQL. If we have to insert new entity in database then we have to use EntityManager method i.e. persist() or Native SQL Query
+		= We can use components or operations with JPQL i.e. COUNT, JOIN, GROUP ID, ORDER BY, DISTINCT etc. So there are a lot of queries in JPQL
+		
+	-> Why we should use JPQL :-
+		1. Advanced Quering:
+			= If we want to use complex queries i.e. joins, aggregations etc then we can use JPQL (because standard CRUD operations are not suitable)
+		2. Improve Performance:
+			= If we are fetching large datasets or executing complex queries then JPQL is used to improve the performance (because standard CRUD operations reduces the performance)
+		3. Aggregations:
+			= JPQL can perform aggregation functions for eg SUM, COUNT etc for reporting and analytics
+		4. Type Safety:
+			= JPQL provides type-safety which is helpful for catching the errors at compile time
+		5. Other benifits:
+			= JPQL provides more flexibility, enabling custom queries and advanced filtering for a wider range of use case
+		etc
+		
+===============================================================================================================

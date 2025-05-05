@@ -1,0 +1,69 @@
+=> JPA is an API which contains classes and interfaces :-
+	1. Persistence <class>
+	2. EntityManagerFactory <interface>
+	3. EntityManager <interface>
+	4. EntityTransaction <interface>
+	
+	5. Query <interface>
+	6. TypedQuery <interface>
+	
+	7. CriteriaBuilder <interface>
+	8. CriteriaQuery <interface>
+	   etc
+	   
+=> NOTE :-
+	= All above classes and interfaces are present in "javax.persistence" package
+	= The "Java Persistence API (JPA)" name has been changed or rebanded to "Jakarta Persistence API (JPA)" in 2019
+	
+==============================================================================================================
+
+=> Persistence :-
+	-> It is a utility class which provides a static method i.e. createEntityManagerFactory() for obtaining EntityManagerFactory instances
+	
+	
+=> EntityManagerFactory :
+	-> It is an interface which acts like a factory that creates EntityManager objects for interaction with database. In other words, it creates and manages a pool of EntityManager objects for efficient database access
+	-> NOTE : It is heavyweight so its recommended to create few instances of EntityManagerFactory and reuse them
+	
+	
+=> EntityManager :-
+	-> It is an interface which manages the lifecycle of entities and provides methods for CRUD Operations
+	-> CRUD operation methods are :-
+		= Insert Operation : persist()
+		= Retrival Operation : find()
+		= Update Operation : merge()
+		= Delete Operation : remove()
+	-> NOTE : It is lightweight and thread-safe so create instances as needed
+	
+	
+=> EntityTransaction :-
+	-> It is an interface which is used for transaction management including starting, committing and rolling back the transaction
+	-> NOTE : It is an integral part of EntityManager which is accessed through getTransaction()
+	
+==============================================================================================================
+
+=> Steps to create JPA first program :-
+	1. Download and install any one IDE
+	2. Create "Simple Java Project" or "Maven Project"
+	3. Add "jars" (for Simple Java Project) or "provide dependencies" (for Maven Project)
+		= Javax Persistence API jar or dependency
+		= JPA provider jar or dependency (hibernate-core)
+		= JDBC Driver jar or dependency (mysql-connector-j)
+	4. Create POJO (Plain Old Java Object) class
+	5. Create mapping file (or provide annotations in POJO class)
+	6. Create Persistence Unit Configuration (persistence.xml) in META-INF folder
+	7. Create main class and execute the application
+		= Create EntityManagerFactory object :-
+			>> EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("main-persistence-unit");
+		= Create EntityManager object :-
+			>> EntityManager entityManager = entityManagerFactory.createEntityManager();
+		= Create EntityTransaction object :-
+			>> EntityTransaction entityTransaction = entityManager.getTransaction();
+		= Perform database operations using EntityManager instance :-
+			>> Insert Operation : persist()
+			>> Retrival Operation : find()
+			>> Update Operation : merge()
+			>> Delete Operation : remove()
+		= Close the resources
+	
+=============================================================================================================

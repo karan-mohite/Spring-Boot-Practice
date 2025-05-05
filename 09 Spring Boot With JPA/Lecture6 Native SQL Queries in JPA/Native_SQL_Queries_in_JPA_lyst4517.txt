@@ -1,0 +1,10 @@
+=> Native SQL Queries in JPA :-
+	-> "Native SQL Queries" refers to the SQL query that is specific to a particular database like MySQL, Oracle etc
+	-> Native SQL Queries are specific to the database and thus they are database-dependent (But JPQL are database-independent query langauge)
+	
+	-> Native SQL Queries are very flexible which allows us to write complex queries that may not easily expressable in JPQL
+	
+	-> NOTE :
+		= In case of native SQL queries, we use "Query" interface rather than "TypedQuery" interface because native SQL queries dont return managed JPA entities and therefore there is no entity type to specify as the result type
+	
+=============================================================================================================
