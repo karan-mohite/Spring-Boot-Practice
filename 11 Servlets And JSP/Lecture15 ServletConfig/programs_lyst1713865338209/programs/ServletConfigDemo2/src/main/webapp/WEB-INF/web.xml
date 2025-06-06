@@ -1,0 +1,22 @@
+<web-app>
+	<servlet>
+		<servlet-name> ms </servlet-name>
+		<servlet-class> in.sp.backend.MyServlet </servlet-class>
+		<init-param>
+			<param-name> name1 </param-name>
+			<param-value> Deepesh </param-value>
+		</init-param>
+		<init-param>
+			<param-name> email1 </param-name>
+			<param-value> deepesh@gmail.com </param-value>
+		</init-param>
+		<init-param>
+			<param-name> city1 </param-name>
+			<param-value> Delhi </param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name> ms </servlet-name>
+		<url-pattern> /myservlet </url-pattern>
+	</servlet-mapping>
+</web-app>

@@ -1,0 +1,136 @@
+<%@page import="java.time.LocalTime"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h3> Welcome to Smart Programming </h3>
+	
+	<%!
+		int rollno=101;
+		String name = "deepak";
+		
+		public int add(int a, int b)
+		{
+			return a+b;
+		}
+	%>
+	
+	<%= rollno %>
+	<%= name %>
+	<%= add(100, 200) %>
+	
+	<%
+		//any java code, logic, method call, JDBC, request - response - session code etc
+		
+		System.out.println("hello deepak");
+	
+		int no1=10, no2=20;
+		int sum = no1+no2;
+		out.println("Sum is : "+sum);
+		
+		if(no1>5)
+		{
+			out.println("true");
+		}
+		
+		for(int i=1; i<=5; i++)
+		{
+			out.println(i);
+		}
+	%>
+	
+	<%= LocalTime.now() %>
+	<%= Math.random() %>
+	
+</body>
+</html>
+
+
+==============================================================================================================
+
+
+public final class index_jsp extends ---- 
+{
+	int rollno=101;
+	String name = "deepak";
+	
+	public int add(int a, int b)
+	{
+		return a+b;
+	}
+	
+	public void _jspInit() {
+	}
+
+	public void _jspDestroy() {
+	}
+
+	public void _jspService(HttpServletRequest request, HttpServletResponse response) throws ---
+	{
+		out.write("\r\n");
+		out.write("\r\n");
+		out.write("<!DOCTYPE html>\r\n");
+		out.write("<html>\r\n");
+		out.write("<head>\r\n");
+		out.write("<meta charset=\"ISO-8859-1\">\r\n");
+		out.write("<title>Insert title here</title>\r\n");
+		out.write("</head>\r\n");
+		out.write("<body>\r\n");
+		out.write("	\r\n");
+		out.write("	<h3> Welcome to Smart Programming </h3>\r\n");
+		out.write("	\r\n");
+		out.write("	");
+		out.write("\r\n");
+		out.write("	\r\n");
+		out.write("	");
+		out.print( rollno );
+		out.write('\r');
+		out.write('\n');
+		out.write('	');
+		out.print( name );
+		out.write('\r');
+		out.write('\n');
+		out.write('	');
+		out.print( add(100, 200) );
+		out.write("\r\n");
+		out.write("	\r\n");
+		out.write("	");
+
+		//any java code, logic, method call, JDBC, request - response - session code etc
+
+		System.out.println("hello deepak");
+
+		int no1=10, no2=20;
+		int sum = no1+no2;
+		out.println("Sum is : "+sum);
+
+		if(no1>5)
+		{
+			out.println("true");
+		}
+
+		for(int i=1; i<=5; i++)
+		{
+			out.println(i);
+		}
+
+		out.write("\r\n");
+		out.write("	\r\n");
+		out.write("	");
+		out.print( LocalTime.now() );
+		out.write('\r');
+		out.write('\n');
+		out.write('	');
+		out.print( Math.random() );
+		out.write("\r\n");
+		out.write("	\r\n");
+		out.write("</body>\r\n");
+		out.write("</html>");
+	}
+}

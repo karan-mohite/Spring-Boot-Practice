@@ -1,0 +1,14 @@
+<web-app>
+	<servlet>
+		<servlet-name> ms </servlet-name>
+		<servlet-class> in.sp.backend.MyServlet </servlet-class>
+		<init-param>
+			<param-name> name1 </param-name>
+			<param-value> Deepak Panwar </param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name> ms </servlet-name>
+		<url-pattern> /myservlet </url-pattern>
+	</servlet-mapping>
+</web-app>

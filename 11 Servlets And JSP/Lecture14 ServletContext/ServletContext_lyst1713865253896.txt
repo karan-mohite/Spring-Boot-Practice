@@ -1,0 +1,58 @@
+=> ServletContext :-
+	-> ServletContext is an interface provided by Java Servlet API
+	-> Syntax :-
+		public interface ServletContext
+		{
+			//methods
+			public void setAttribute(String name, Object value);
+			public Object getAttribute(String name);
+			public void removeAttribute(String name)
+			
+			public String getInitParameter(String name)
+			public Enumeration getInitParameterNames()
+			
+			etc
+		}
+		
+	-> It is used to store and share configuration and resource data among all servlets within the same web application
+	
+	-> Points to note :-
+		= When the ServletContext object is created :-
+			>> When we start the server, then web container also starts and it deploys all the projects and at that time ServletContext object is created
+			
+		= When the ServletContext object is destroyed :-
+			>> When we shutdown the server, then web container will also stops and all the projects gets undeployed and at that time ServletContext object will be destroyed
+			
+		= Lifetime of ServletContext object :-
+			>> The lifetime of ServletContext object is same as that lifetime of web application
+			
+		= Scope of ServletContext object :-
+			>> The scope of ServletContext object is accessaible to the whole web application and to all the resources of that particular web application
+			
+		= Which type of data we can store in ServletContext object :-
+			>> It can store parameters data and attributes data
+			
+	-> How to get ServletContext object :-
+		1. By using getServletContext() method of Servlet interface
+			>> ServletContext context = getServletContext();
+		2. By using ServletRequest object
+			>> ServletContext context = req.getServletContext();
+		3. By using ServletConfig object
+			>> ServletContext context = config.getServletContext();
+			
+	-> How to store data in ServletContext object :-
+		1. Using setAttribute() method
+			>> context.setAttribute("attributeName", attributeValue);
+		2. Using Initialization Parameters (web.xml)
+			>> <context-param>
+					<param-name> parameterName </param-name>
+					<param-value> parameterValue </param-value>
+			   </context-param>
+			   
+	-> How to get data from ServletContext object :-
+		1. Using getAttribute() method
+			>> Object value = context.getAttribute("attributeName");
+		2. Using Initialization Parameters methods
+			>> String parameterValue = context.getInitParameter("parameterName");
+			
+===================================================================================================================

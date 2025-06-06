@@ -1,0 +1,11 @@
+<web-app>
+	<filter-mapping>
+		<filter-name>encDecFilter</filter-name>
+		<url-pattern>/regForm</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>validationFilter</filter-name>
+		<url-pattern>/regForm</url-pattern>
+	</filter-mapping>
+</web-app>

@@ -1,0 +1,21 @@
+<web-app>
+	<servlet>
+		<servlet-name> ms </servlet-name>
+		<servlet-class> in.sp.backend.MyServlet </servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name> ms </servlet-name>
+		<url-pattern> /myser </url-pattern>
+	</servlet-mapping>
+	
+	<!--
+	<servlet>
+		<servlet-name> ms2 </servlet-name>
+		<servlet-class> in.sp.backend.MyServlet2 </servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name> ms2 </servlet-name>
+		<url-pattern> /myser2 </url-pattern>
+	</servlet-mapping>
+	-->
+</web-app>

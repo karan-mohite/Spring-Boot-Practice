@@ -1,0 +1,65 @@
+=> Filters :-
+	-> A filter is a server side component which is executed at pre-processing and post-processing of the request
+	-> Use of filters :-
+		1. Input Validations
+		2. Encryption & Decryption
+		3. Session Validations
+		4. Logging Operations
+		5. Internationalization
+		   etc
+		   
+	-> Filter API :-
+		= There are 3 main interfaces in Filter API :-
+			1. Filter
+			2. FilterChain
+			3. FilterConfig
+			
+---------------------------------------------------------------------------
+
+=> Filter :-
+	-> Filter is an interface which provides filter life-cycle related methods
+	-> Syntax :-
+		public interface Filter
+		{
+			public void init(FilterConfig filterConfig) throws ServletException;
+			public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ---- ;
+			public void destroy();
+		}
+		
+	-> Filter life-cycle :-
+		1. Filter Loading
+		2. Filter Instantiation
+		3. Filter Initialization (init() method is executed)
+		4. Filter Processing (doFilter() method is executed)
+		5. Filter Deinstantiation (destroy() method is executed)
+		
+---------------------------------------------------------------------------
+
+=> FilterChain :-
+	-> FilterChain is an interface which is responsible to invoke the next filter or resource
+	-> Syntax :-
+		public interface FilterChain
+		{
+			public void doFilter(ServletRequest req, ServletResponse resp) throws IOException, ServletException;
+		}
+		
+	-> FilterChain object is passed in the doFilter() method of Filter interface
+	
+--------------------------------------------------------------------------
+
+=> FilterConfig :-
+	-> FilterConfig is an interface which is used to provide any configuration data to the filters
+	-> Syntax :-
+		public interface FilterConfig
+		{
+			public String getFilterName();
+			public ServletContext getServletContext();
+			public String getInitParameter(String name);
+			public Enumeration<String> getInitParameterNames();
+		}
+		
+	-> For every Filter an object is created by web container which is known as FilterConfig object
+	-> The FilterConfig object gets the configuration information from web.xml file or annotations
+	-> The configuration information is provided only for particular filter
+	
+====================================================================================================================
