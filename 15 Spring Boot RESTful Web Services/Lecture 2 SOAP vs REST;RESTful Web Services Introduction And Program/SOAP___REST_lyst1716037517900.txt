@@ -1,0 +1,73 @@
+=> What is difference between SOAP & REST in Java ?
+	-> SOAP (Simple Object Access Protocol) and REST (Representational State Transfer) are two different approaches for building web services in Java.
+	-> Below are the differences :-
+		1. Nature
+			= SOAP: It is a "protocol" which follows a strict set of standards and rules to allow communication between the client and server.
+			= REST: It is an "architectural style" that follows a set of constraints or guidelines for designing networked applications.
+
+		2. Standards
+			= SOAP: It follows standards set by W3C (World Wide Web Consortium - Group). It has a structured format (XML) with optional security add-ons like WS-Security and WS-AtomicTransaction.
+			= REST: It follows the six constraints without strict standards i.e. client-server architecture, uniform interface, statelessness, cacheability, layered system and optional code on demand.
+
+		3. Data Format
+			= SOAP: It transports data in XML format only.
+			= REST: It can transport data in multiple formats such as JSON, XML, Plain Text, HTML, etc.
+
+		4. Bandwidth
+			= SOAP: It requires more bandwidth due to the verbose nature of XML and additional overhead from SOAP-specific headers.
+			= REST: It typically requires less bandwidth because it can use more compact formats like JSON and has less overhead.
+			
+		6. Performance
+			= SOAP: Its performance can be slower due to larger XML messages which consume more bandwidth.
+			= REST: It offers better performance due to its lightweight messages and potential for caching
+
+		7. Scalability
+			= SOAP: It often requires the server to maintain state between requests, making it less scalable for high traffic.
+			= REST: It is stateless, meaning each request is independent, leading to better scalability.
+
+		8. Security
+			= SOAP: It provides a framework for incorporating security features on top of the transport protocol (often HTTPS) through standards like WS-Security (Web Services Security).
+			= REST : It inherits security from the underlying protocol (HTTPS) and may require additional configuration.
+
+		9. APIs
+			= SOAP: SOAP APIs expose functionalities or operations. They are typically more complex to develop and understand.
+			= REST: REST APIs center around data and how to interact with it using standard HTTP methods like GET, POST, PUT, and DELETE, making them more straightforward and user-friendly
+
+		10. Java APIs
+			= SOAP: Java provides JAX-WS (Java API for XML Web Services) for developing and consuming SOAP web services.
+			= REST: Java provides JAX-RS (Java API for RESTful Web Services) is used for building and interacting with RESTful web services.		
+
+		11. Usage
+			= SOAP: It is commonly used in enterprise-level applications and scenarios that require high security, ACID-compliant transactions and formal contracts defined by WSDL.
+			= REST: It is widely used in web services and public APIs due to its simplicity, scalability, and performance.
+
+		12. Current Relevance:
+			= SOAP: While not obsolete, it is considered more complex and heavyweight, leading to its declining usage in favor of more modern approaches.
+			= REST: The predominant approach for web services and APIs, known for its simplicity and ease of integration with web technologies.
+
+==================================================================================================
+
+=> REST:
+	-> No Strict Standards:
+		= Unlike SOAP, REST doesn't have a rigid set of rules defined by an organization like the W3C. It focuses on principles and best practices for designing web services.
+	-> Six Architectural Constraints:
+		= These are guidelines that promote a clean and scalable way to build APIs. Let's explore these constraints:
+			>> Core Principles:
+			1. Client-Server Architecture:
+				= The roles are clearly separated. The client requests data or actions, and the server fulfills those requests.
+			2. Uniform Interface:
+				= There's a consistent way to interact with the server, regardless of the specific resource being accessed. This often involves using standard methods like GET, POST, PUT, and DELETE for different actions.
+			3. Statelessness:
+				= Each request from a client (like your phone app) to the server (like a database) should be independent. The server doesn't remember past interactions with that client for that specific request.
+			
+			>> Supporting Features:
+			4. Cacheable:
+				= Responses from the server can be cached by intermediate systems (like web servers) to improve performance by reducing the need to always go back to the main server.
+			5. Layered System:
+				= The architecture can be layered, meaning intermediaries like caches or security gateways can exist between the client and server without affecting communication.
+			
+			>> Optional Feature:
+			6. Optional Code on Demand (optional):
+				= Servers can optionally send executable code (like scripts) to clients to extend functionality. However, this is not a core principle of REST.
+				
+==================================================================================================

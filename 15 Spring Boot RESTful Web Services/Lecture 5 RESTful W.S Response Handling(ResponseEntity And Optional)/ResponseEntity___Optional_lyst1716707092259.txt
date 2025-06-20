@@ -1,0 +1,47 @@
+=> ResponseEntity :-
+	-> ResponseEntity is a class in Spring Boot that encapsulates the complete HTTP response.
+	-> Data encapsulated in HTTP response object are :-
+		= Status Code (for eg 200 OK, 404 NOT FOUND etc)
+		= Headers (for eg content type, cache control etc)
+		= Body (for eg JSON, XML, Plain Text, Object)
+	-> Methods :-
+		= Static Methods:
+			1. ok()
+			2. ok(T body)
+			3. status(HttpStatus status)
+			4. status(int status)
+			5. badRequest()
+			6. notFound()
+			7. noContent()
+			8. accepted()
+			   etc
+		= Instance Methods:
+			1. getStatusCode()
+			2. getBody()
+			3. getHeaders()
+			4. hasBody()
+			5. getStatusCodeValue()
+			   etc
+			   
+	-> NOTE : We can use ResponseEntity class to handle the exceptions as it can encapsulate both the status code and the body (JSON object or String message) in HTTP response
+	
+=======================================================================================================
+
+=> Optional :-
+	-> Optional is a Java class which is present in "java.util" package
+	-> It is a container object used to represent the presence or absence of the value
+	-> NOTE : 
+		= It was introduced in Java 8 version to support functional programming paradiagm and improves the handling of null values in java
+	-> Methods :-
+		1. of(T value)
+		2. empty()
+		3. isPresent()
+		4. get()
+		5. orElse(-)
+		6. orElseGet(-)
+		7. orElseThrow(-)
+		8. ifPresent(-)
+		9. map(-)
+		10 filter(-)
+		
+=======================================================================================================

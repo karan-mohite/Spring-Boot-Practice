@@ -1,0 +1,127 @@
+1. What is Pageable?
+	-> Pageable is an interface in Spring Data.
+
+2. What is the Use of Pageable?
+	-> The Pageable interface is used to encapsulate pagination information.
+	-> It provides the abstraction to specify pagination parameters such as page number, page size, and sorting information.
+	-> By implementing this interface, we can pass these pagination parameters to repository methods to fetch a specific subset of data, making it essential for handling large datasets efficiently.
+	
+3. Methods of Pageable Interface?
+	-> getPageNumber()
+		= Returns the current page number (zero-based index).
+	-> getPageSize()
+		= Returns the size of the page (number of items per page).
+	-> getOffset()
+		= Returns the offset to be taken according to the underlying page and page size. This is calculated as pageNumber * pageSize.
+	-> getSort()
+		= Returns the sorting parameters for the page request.
+	-> next()
+		= Returns a new Pageable object for the next page.
+	-> previousOrFirst()
+		= Returns a new Pageable object for the previous page or the first page if already on the first page.
+	-> first()
+		= Returns a new Pageable object for the first page.
+	-> hasPrevious()
+		= Indicates whether there is a previous page.
+
+==================================================================================================
+
+1. What is PageRequest?
+	-> PageRequest is a class in Spring Data. It is a concrete implementation of the Pageable interface.
+	
+2. What is the Use of PageRequest?
+	-> The PageRequest class is used to create Pageable objects, which are utilized to specify pagination parameters for querying data in a paginated manner.
+	-> Specifically, it allows us to:
+		= Define the page number (zero-based index) and the size of the page (number of items per page).
+		= Create an object that can be passed to repository methods to fetch specific subsets of data.
+	-> This is particularly useful for applications dealing with large datasets, where displaying all data at once is impractical. By using PageRequest, we can fetch and display data in smaller chunks, improving performance and user experience.
+
+3. Methods of PageRequest Class?
+	-> of(int page, int size)
+		= Creates a new PageRequest object with the specified page number and page size.
+	-> of(int page, int size, Sort sort)
+		= Creates a new PageRequest object with the specified page number, page size, and sorting parameters.
+	-> getPageNumber()
+		= Returns the zero-based page index.
+	-> getPageSize()
+		= Returns the size of the page.
+	-> getOffset()
+		= Returns the offset to be taken according to the underlying page and page size.
+	-> next()
+		= Returns a new PageRequest object for the next page.
+	-> previous()
+		= Returns a new PageRequest object for the previous page.
+	-> previousOrFirst()
+		= Returns a new PageRequest object for the previous page or the first page if already on the first page.
+	-> first()
+		= Returns a new PageRequest object for the first page.
+
+=================================================================================================
+
+1. What is Page?
+	-> Page is an interface in Spring Data.
+	
+2. What is the Use of Pageable?
+	-> The Page interface is used to represent a sublist of a list of objects along wit pagination information. It is used to manage and navigate through paginated data.
+
+3. Methods of Page Interface?
+    -> getContent():
+		= Returns the content of the current page.
+    -> getTotalPages():
+		= Returns the total number of pages available.
+    -> getTotalElements():
+		= Returns the total number of elements in the dataset.
+    -> getNumber():
+		= Returns the number of the current page.
+    -> getSize():
+		= Returns the size of the page.
+    -> getNumberOfElements():
+		= Returns the number of elements on the current page.
+    -> hasPrevious():
+		= Returns whether there is a previous page.
+    -> isFirst():
+		= Returns whether this page is the first one.
+    -> hasNext():
+		= Returns whether there is a next page.
+    -> isLast():
+		= Returns whether this page is the last one.
+    -> nextPageable():
+		= Returns the Pageable to request the next page.
+    -> previousPageable():
+		= Returns the Pageable to request the previous page.
+		
+---------------------------
+
+1. What is PageImpl?
+	-> PageImpl is an implemented class of Page interface in Spring Data.
+
+2. What is the Use of PageImpl?
+	-> It represents a concrete implementation of a page of items, allowing us to create instances of paginated data that can be returned from repository methods.
+
+3. Methods of PageImpl Class?
+	-> getContent()
+		= Returns the content of the current page as a List.
+	-> getTotalPages()
+		= Returns the total number of pages available.
+	-> getTotalElements()
+		= Returns the total number of elements in the dataset.
+	-> getNumber()
+		= Returns the number of the current page (zero-based index).
+	-> getSize()
+		= Returns the size of the page (number of elements per page).
+	-> getNumberOfElements()
+		= Returns the number of elements currently on this page.
+	-> hasPrevious()
+		= Returns whether there is a previous page.
+	-> isFirst()
+		= Returns whether this page is the first one.
+	-> hasNext()
+		= Returns whether there is a next page.
+	-> isLast()
+		= Returns whether this page is the last one.
+	-> nextPageable()
+		= Returns the Pageable to request the next page.
+	-> previousPageable()
+		= Returns the Pageable to request the previous page.
+		
+=================================================================================================

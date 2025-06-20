@@ -1,0 +1,18 @@
+=> Programs :-
+	1. Convert "JSON String" to "Java Object"
+	2. Convert "JSON Array String" to "Java Array Object"
+	3. Convert "Java Object" to "JSON String"
+	4. Write "Java Object" to "JSON file" and Read "JSON file" to "Java Object"
+	5. Convert "JSON String" to "Java List"
+	6. Convert "JSON String" to "Java Map"
+	7. Read "JSON URL" to "Java Object"
+	
+	8. Read "JSON String" or "JSON Array String" using Streaming API
+	9. Read "JSON URL" using Streaming API
+	10. Write "JSON Data" into file using Streaming API
+	
+	11. Read "JSON URL" using Tree Model
+
+	= TASK :
+		-> WAP to read the JSON data (single or multiple data) from file using JsonGenerator
+		-> WAP to read the JSON data from URL using ObjectNode and ArrayNode

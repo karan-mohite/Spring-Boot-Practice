@@ -1,0 +1,75 @@
+=> Pageable :-
+	-> Interface in Spring Data
+	-> Use
+		= It encapsulates pagination details, including page number, size, and sorting.
+		= It allows passing these parameters to repository methods for fetching specific data subsets, crucial for efficient handling of large datasets.
+	-> Methods 
+		= getPageNumber()
+		= getPageSize()
+		= getOffset()
+		= getSort()
+		= next()
+		= previousOrFirst()
+		= first()
+		= hasPrevious()
+
+==================================================================================================
+
+=> PageRequest :-
+	-> Concrete implemented class of the Pageable interface.
+	-> Use :
+		= It creates Pageable objects, defining pagination parameters like page number and size.
+		= It's essential for fetching specific data subsets in paginated queries, improving performance for large datasets.
+	-> Methods :
+		= of(int page, int size)
+		= of(int page, int size, Sort sort)
+		= getPageNumber()
+		= getPageSize()
+		= getOffset()
+		= next()
+		= previous()
+		= previousOrFirst()
+		= first()
+
+=================================================================================================
+
+=> Page :-
+	-> Interface in Spring Data.
+	-> Use :
+		= The Page interface is used to represent a sublist of a list of objects along with pagination information.
+		= It is used to manage and navigate through paginated data.
+	-> Methods :
+		= getContent():
+		= getTotalPages():
+		= getTotalElements():
+		= getNumber():
+		= getSize():
+		= getNumberOfElements():
+		= hasPrevious():
+		= isFirst():
+		= hasNext():
+		= isLast():
+		= nextPageable():
+		= previousPageable():
+		
+---------------------------
+
+=> PageImpl :-
+	-> Implemented class of Page interface in Spring Data.
+	-> Use :
+		= It represents paginated data, facilitating the creation of instances for returning paginated results from repository methods
+	-> Methods :
+		= getContent()
+		= getTotalPages()
+		= getTotalElements()
+		= getNumber()
+		= getSize()
+		= getNumberOfElements()
+		= hasPrevious()
+		= isFirst()
+		= hasNext()
+		= isLast()
+		= nextPageable()
+		= previousPageable()
+		
+=================================================================================================

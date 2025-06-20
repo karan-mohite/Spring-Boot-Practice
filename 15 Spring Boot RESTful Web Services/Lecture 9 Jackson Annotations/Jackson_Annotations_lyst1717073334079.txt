@@ -1,0 +1,28 @@
+=> Jackson Annotations :-
+	1. @JsonProperty
+		-> It is used to indicate the mapping between a JSON property and a corresponding Java Object property during serialization and deserialization
+		-> It can be used with property or getter/setter methods
+	
+	2. @JsonAlias
+		-> It is used to provide alternative names for JSON property during deserialization
+		-> It can be used with property or getter/setter methods or in constructor arguments
+	
+	3. @JsonIgnore
+		-> It is used to indicate that the specific property or getter/setter method should be ignored in the JSON representation or being mapped from the JSON input during serialization and deserialization process
+		-> It can be used with property or getter/setter methods or in constructor arguments
+	
+	4. @JsonIgnoreProperties
+		-> It is used to ignore certain properties when mapping to or from JSON during serialization and deserialization
+		-> It is used at class level
+	
+	5. @JsonFormat
+		-> It is used to customize the formatting of date/time values during serialization and deserialization
+		-> It can be used with property or getter/setter methods
+	
+	6. @JsonAnyGetter
+		-> It is used to dynamically serialize properties of a class that do not have explicit mapping, It allows us to include additional properties in the serialized JSON that are not ecplicitly defined as properties or getter methods
+	
+	7. @JsonAnySetter
+		-> It is used to dynamically deserialize properties of a class that do not have explicit mapping. It allows us to include additional properties in the deserialized JSON that are not explicitly defined as properties or setter methods
+	
+	   etc

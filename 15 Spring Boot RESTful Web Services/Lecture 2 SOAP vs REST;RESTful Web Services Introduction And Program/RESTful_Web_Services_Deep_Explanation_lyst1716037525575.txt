@@ -1,0 +1,36 @@
+=> What is difference between SOAP & REST in Java ?
+
+=> What is REST, explain its constraints ?
+
+=========================================================================================================
+
+=> Difference between REST & RESTful :-
+	-> REST:
+		= REST is a set of architectural constraints for designing web services
+		= There are 6 main constraints:
+			1. Client-Server Architecture (Core Principle)
+			2. Uniform Interface (Core Principle)
+			3. Statelessness (Core Principle)
+			4. Cacheable (Supporting Feature)
+			5. Layerd Systems (Supporting Feature)
+			6. Optional Code on Demand (Optional Feature)
+			
+	-> RESTful:
+		= RESTful is an API that follows the constraints of REST, offering a web-like experience with resources and HTTP methods
+		
+----------------------------------------------------------------------
+
+=> RESTful Web Services :-
+	-> RESTful web services are also known as "RESTful API's" (or REST web services or REST API)
+	-> REST full form is:
+		= REpresentational - it should support JSON and XML
+		= State - it means data associated with a specific resource
+		= Transfer - transfer the state using HTTP protocol
+	-> We can develop RESTful web services using multiple frameworks i.e. SpringBoot, JAX-RS, Jersey etc
+	
+----------------------------------------------------------------------
+
+=> How to develop simple RESTful Web Services in SpringBoot and Test it in Postman tool:
+	= Program
+	
+=========================================================================================================

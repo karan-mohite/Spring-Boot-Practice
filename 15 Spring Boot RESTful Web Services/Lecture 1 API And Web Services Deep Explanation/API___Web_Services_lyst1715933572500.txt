@@ -1,0 +1,67 @@
+=> API (Application Programming Interface) :-
+	-> API is an application component or piece of code which is used to communicate between different systems over the network
+	-> API acts as bridge between different systems or devices
+	-> For example :-
+		= Login API's (Google & Facebook login API)
+		= Google Map API's
+		= Payment Gateway API's
+		= Airline, Train, Bus Reservation API's
+		= Movie Booking API's
+		= Weather API's
+		etc
+	-> Types of API's :-
+		1. Public or Open API's
+			= These are open to the public which can be used by anyone
+			= These API's can be free of cost or paid
+		2. Partner API's
+			= These API's are meant for business-to-business partnership
+		3. Private or Internal API's
+			= These are internal to any specific enterprise application within the company
+		4. Composit API's
+			= These combine any two or more different API's for any system or project
+
+-------------------------------------------------------------------------------------------------
+
+=> Web Services :-
+	-> Web Services are a specific type of API designed to follow a set of protocols and standards of communication
+		>> "Protocols" define how data is exchanged between different entities. They are the rules of communication. For eg. HTTP/HTTPS, SOAP (Simple Object Access Protocol), REST (Representational State Transfer), WS-Security (Web-Services Security) etc
+		>> "Standards" defines the format or structure of data how it's described. For example WSDL (Web Services Description Language), UDDI (Universal Description, Discovery and Integration), XML (Extensible Markup Language), JSON (JavaScript Object Notation) and XML Schema
+	-> IMPORTANT : While web services can potentially return other types of resources but their primary focus is on structured data exchange in formats like XML or JSON
+	
+	-> NOTE :-
+		= All web services are API's but all API's are not web services
+		= Web services are independent of the platform on which they are developed.
+		= To test web services we will use "Postman" tool
+	
+	-> There are mainly 2 types of web services :-
+		1. SOAP-based Web Services
+		2. RESTful Web Services
+
+------------------------------------------------------------------------------------------------
+
+=> Resources :-
+	-> Resources is the simple files i.e. HTML, images, data, videos etc which are present on the server
+	-> To access the resources from server, we use URL (Uniform Resource Locator)
+
+------------------------------------------------------------------------------------------------
+
+=> HTTP :-
+	-> Full form is Hyper Text Transfer Protocol
+	-> HTTP is a protocol (TCP/IP based communication protocol) that is used to transfer the resources over the network
+	-> HTTP was developed by Tim-Berners-Lee and his team
+	-> HTTP request methods are :-
+		= GET
+		= Post
+		= PUT
+		= DELETE
+		= PATCH
+		  etc
+		  
+	-> NOTE : Som common protocols are :-
+		1. FTP (File Transfer Protocol)
+		2. SMTP (Simple Mail Transfer Protocol)
+		3. MIME (Multipurpose Internet Mail Extention)
+		4. IMAP (Internet Message Access Protocol)
+		   etc
+		   
+======================================================================================================

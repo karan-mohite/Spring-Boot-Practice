@@ -1,0 +1,55 @@
+=> Jackson :-
+	-> Jackson is a popular "Java library used to process the JSON data"
+	-> It is used to convert or parse
+		= JSON data into Java Objects (deserialization)
+		= Java Objects into JSON data (serialization)
+		
+	-> Features of Jackson :-
+		= Easy to use
+		= High performance
+		= No need to create mapping
+		= Integration with java frameworks
+		= Open source (free to use)
+		  etc
+		  
+	-> Jackson provides 3 ways to process the JSON data:
+		1. Data Binding
+		2. Streaming API
+		3. Tree Model
+		
+-----------------------------------------------------------------------------
+
+=> Data Binding :-
+	-> It is a way to convert JSON to POJO and vice-versa using property accessors or annotations
+	-> Data binding is very powerful, especially for complex data structures
+	-> It is of 2 types:
+		1. Simple Data Binding:
+			= It converts JSON to Basic Java Types (Strings, Lists, Maps etc) and vice-versa
+		2. Full Data Binding
+			= It converts JSON from Complex Java Objects and vice-versa
+	-> Important classes and interfaces for this are:-
+		1. ObjectMapper <class> [central class for data binding in Jackson]
+		2. ObjectReader <interface>
+		3. ObjectWriter <interface>
+		
+-----------------------------------------------------------------------------
+
+=> Streaming API :-
+	-> It is used to process JSON data in streaming manner, we can read and write JSON data incrementally, without loading the entire JSON structure into memory
+	-> It is also very powerful approach, especially used for large JSON data (document) because it provides efficient and memory-friendly processing
+	-> Important classes and interfaces for this are:-
+		1. JsonFactory <class>
+		2. JsonParser <interface>
+		3. JsonGenerator <interface>
+		
+-----------------------------------------------------------------------------
+
+=> Tree Model :-
+	-> It is used to create in-memory tree representation of the JSON document similar to DOM tree
+	-> It is not much powerful but it is most flexible approach to read and write JSON data
+	-> Important classes for this are:-
+		1. JsonNode <class>
+		2. ObjectNode <class>
+		3. ArrayNode <class>
+		
+=======================================================================================================

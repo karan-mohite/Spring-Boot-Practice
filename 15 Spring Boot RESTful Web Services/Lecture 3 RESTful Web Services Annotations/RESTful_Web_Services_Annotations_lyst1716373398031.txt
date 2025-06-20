@@ -1,0 +1,29 @@
+=> Some important annotations that we use in RESTful Web Services are :-
+	-> Controller Annotations:
+		= @RestController (@RestController = @Controller + @ResponseBody)
+	-> Rest Mapping Annotations:
+		= @RequestMapping
+		= @GetMapping
+		= @PostMapping
+		= @PutMapping
+		= @DeleteMapping
+		= @PatchMapping
+	-> Parameter Annotations:
+		= @RequestParam
+		= @PathVariable
+		= @RequestBody
+		= @RequestHeader
+		= @RequestPart
+		= @RequestAttribute
+	-> Response Annotations:
+		= @ResponseBody
+		= @ResponseStatus
+	-> Model & View Annotations:
+		= @ModelAttribute
+	-> Security Annotations:
+		= @Secured
+		= @PreAuthorize
+		= @PostAuthorize
+	etc
+	
+=======================================================================================================
