@@ -1,0 +1,14 @@
+=> Error & Exception in Spring WEB-MVC :-
+	-> Error and Exception are the unwanted events in the program
+	-> In Spring WEB-MVC, we can handle the error or exception by 3 ways :-
+		1. By web.xml file
+		2. By pre-defined class (SimpleMappingExceptionResolver)
+		3. By annotations (@ExceptionHandler)
+		
+--------------------------------------------------------------------------------------
+
+=> @ExceptionHandler :-
+	-> It is used to define a method that handles exception thrown by the methods in the controller
+	-> It provides a way to centralize the exception handling and present a consistent response to the client in case of errors
+	
+=====================================================================================================================

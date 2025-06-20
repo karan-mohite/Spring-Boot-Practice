@@ -1,0 +1,55 @@
+=> Thymeleaf provides a lot of expressions, attributes & utility objects (with functions) which are as follows :-
+	
+	-> Expressions :-
+		1. Literal Expressions:
+			= These are used to define fixed values directly
+			= Syntax : 'This is string', 100, true etc ( ${'This is string'} )
+		2. Variable Expressions:
+			= These are used to access variables passed from the controller or context
+			= Syntax : ${variable_name} or ${object_name.variable_name}
+		3. Message Expressions:
+			= These are used to access externalized messages i.e. internationalization, error etc
+			= Syntax : #{message.key}
+		4. Link Expressions:
+			= These are used to construct dynamic URLs based on variables
+			= Syntax : @{/path/to/resource}?param1=${value1}&param2=${value2}
+			  For example : <a th:href="@{/products/${product.id}}"> View Product </a>
+	
+	-> Attributes :-
+		1. Attribute Manipulation:
+			= th:text, th:utext, th:value, th:href, th:src, th:alt, th:title, th:attr, th:id, th:name, th:class, th:style etc
+			= These are used to modify existing HTML element attributes dynamically based on expressions or variables
+		2. Conditional Rendering:
+			= th:if, th:unless, th:switch, th:case
+		3. Iteration & Looping:
+			= th:each, th:object
+		4. Local Variable Declaration:
+			= th:with
+		5. Fragment Inclusion & Replacement:
+			= th:replace, th:insert, th:include, th:fragment
+		6. User Interaction (or Form Handling):
+			= th:onclick, th:onsubmit
+			
+	-> NOTE for expressions and attributes : 
+		= In most of the cases, we will be using expressions within attributes prefixed with th:
+		
+	-> Utility Objects (with functions) :-
+		1. #strings
+			= toUpperCase(String str), toLowerCase(String str), length(String str), replace(-,-,-) etc
+		2. #arrays
+			= length(-), contains(-), sort(-), reverse(-) or index, count, size, even or odd etc
+		3. #lists
+			= size(-), get(-), addAll(-), indexOf(-) etc
+		4. #sets
+			= size(-), get(-), addAll(-), isEmpty(-) etc
+		5. #maps
+			= size(-), get(-), put(-), keySet(-) etc
+		6. #locale
+			= getCountry(-), getDefault() etc
+		7. #dates
+			= now(), format(-) etc
+		8. #calenders
+			= get(-), create() etc
+		etc
+		
+==============================================================================================================

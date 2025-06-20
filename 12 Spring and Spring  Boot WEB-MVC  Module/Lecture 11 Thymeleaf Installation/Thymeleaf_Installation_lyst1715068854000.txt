@@ -1,0 +1,7 @@
+=> How to install thymeleaf in STS IDE :-
+	1. Open STS IDE and go to Help menu
+	2. Go to Install new software and click on Add button
+	3. Provide any Name like Thymeleaf and Location i.e. http://www.thymeleaf.org/eclipse-plugin-update-site/
+	4. Then follow the steps and installation will be completed
+	
+================================================================================================================

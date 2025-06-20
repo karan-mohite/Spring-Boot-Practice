@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<ul>
+		<li th:each="marks : ${modelArray}" th:text="${marks}"></li>
+	</ul>
+	
+	<h3 th:with="marks_array = ${modelArray}">
+		<span th:text="${marks_array}"></span> <br/> <br/>
+		<span th:text="${#arrays.length(marks_array)}"></span> <br/> <br/>
+		<span th:text="${#arrays.contains(marks_array, 80)}"></span> <br/> <br/>
+	</h3>
+	
+	<ul>
+		<li th:each="marks, status : ${modelArray}" th:text="${status.index}+' - '+${marks}"></li>
+	</ul>
+
+</body>
+</html>

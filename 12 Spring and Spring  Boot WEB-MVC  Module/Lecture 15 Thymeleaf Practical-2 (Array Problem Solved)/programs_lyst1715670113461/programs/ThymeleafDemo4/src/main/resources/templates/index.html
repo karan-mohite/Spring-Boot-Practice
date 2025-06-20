@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h2> Welcome to Smart Programming </h2>
+	
+	<div th:with="no1=100, no2=50">
+		<h3> <span th:text="${'no1 = '+no1}"></span> </h3>
+		<h3> <span th:text="${'no2 = '+no2}"></span> </h3>
+		<h3> <span th:text="${'Sum of no1 & no2 is '+(no1+no2)}"></span> </h3>
+	</div>
+	
+	<h3> <span th:text="${'no1 = '+no1}"></span> </h3>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+=> NOTE :-
+	-> Spring MVC traditionally defaults to supporting JSP for view rendering but it can be configured to use Thymeleaf
+	-> On the other hand, Spring Boot favours Thymeleaf as its default view technology, but it also allows the integration with JSP
+
+--------------------------------------------------------------------------------------------------------------
+
+=> Thymeleaf :-
+	-> Thymeleaf is a modern, open-source server-side "Java Template Engine" used to create dynamic web pages for both web and standalone applications
+	-> It process the special attributes and expressions embedded within HTML markup, to generate dynamic web pages
+	-> NOTE :- Thymeleaf offers various template modes i.e. HTML, XML, TEXT, JavaScript and CSS, to support different types of content processing
+	
+	-> Why we should use thymeleaf in place of JSP :-
+		1. Natural Template:
+			= Thymeleaf templates are HTML-based making them more user-friendly and easier to read as compared to JSP's which are the mixture of Java & HTML syntax
+		2. True Separation of Concerns:
+			= Thymeleaf promotes a clean separation between HTML markup and server-side code, enhancing maintanability and collaboration between frontend and backend developers
+		3. No Need for Scriptlets:
+			= Thymeleaf eliminates the need for scriptlets, which can clutter JSP files with java code, leading to harder-to-maintain and less readable code
+		4. Powerful Expressions:
+			= Thymeleaf provides powerful expression langauge capabilities, enabling dynamic content generation, conditionals, iterations and more directly in the HTML template
+		5. Rich Features:
+			= Thymeleaf offers features like fragment inclusion, layout dialects, internationalization etc, enhancing the producitivity and reducing the boilerplate code
+		6. Integration with Spring Boot:
+			= Thymeleaf integrates with spring boot, offering auto-configuration and reducing setu overhead, while JSP may require additional configuration and dependencies
+		etc
+	
+--------------------------------------------------------------------------------------------------------------
+
+=> Template :-
+	-> A template is a pre-designed layout or pattern used to create web pages or other outputs
+	-> In web development, HTML files are the common template which contains placeholders or template tags that are replaced with actual content during the runtime to create dynamic web pages
+		
+		
+-> Template Engine :-
+	-> A template engine is a software tool or component designed to process templates and dynamically generate content based on provided data
+	-> It acts as a bridge between static templates and server-side logic
+	
+==============================================================================================================
