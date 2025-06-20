@@ -1,0 +1,89 @@
+=> CSS Frameworks :-
+	1. Bootstrap - (Twitter - now X) 
+	2. Materialize - (Google)
+	3. Tailwind CSS - (Tailwind Labs)
+	4. Bulma - (Jeremy Thomas)
+	5. Semantic UI - (Jack Lukic)
+	6. Foundation - (Zurb)
+	   etc
+
+=============================================================================================================
+
+=> Bootstrap :-
+	-> Bootstrap is a free and open-source CSS framework that is used to design responsive websites faster and easier.
+	-> It is the most popular CSS framework that includes HTML, CSS, and JavaScript.
+
+	-> History:
+		-> Bootstrap was originally developed by Mark Otto and Jacob Thornton at Twitter.
+		-> It was released as an open-source project in 2011.
+		-> First name of Bootstrap was "Twitter Blueprint".
+
+	-> Advantages Of Bootstrap:
+		1. Lightweight and customizable
+		2. Responsive structures and styles
+		3. Supports all major browsers
+		4. Saves a lot time
+		5. Easy to use
+		6. Fast as compared to CSS
+		7. Contains several JavaScript plugins using the jQuery
+
+	-> How to use Bootstrap:
+		1. Add Bootstrap CSS link.
+			= Add the Bootstrap CSS link in the <head> of your HTML file.
+		2. Add Bootstrap JS and dependencies (if we want to use any JS component)
+			= Add the Bootstrap JS and its dependencies right before the closing </body> tag.
+		3. Apply Bootstrap classes to HTML elements.
+			= Apply Bootstrap classes to your HTML elements to style them.
+			
+-----------------------------------------------------------------------------------------------
+	
+	-> Bootstrap Components List in Categories
+		1. Components:
+			= Buttons
+			= Badges
+			= Breadcrumbs
+			= Cards
+			= Carousels
+			= Forms (Form controls, Selects, Checkboxes & Radios, etc.)
+			= Input groups
+			= List groups
+			= Modals
+			= Navs & Tabs
+			= Pagination
+			= Popovers
+			= Progress bars
+			= Tooltips
+			  etc
+		2. Menus and Navigation:
+			= Navbar
+			= Offcanvas
+			= Dropdowns
+			= Menus (Vertical and Horizontal menus)
+			  etc
+		3. Content Display:
+			= Typography
+			= Images
+			= Tables
+			= Figures
+			= Media objects
+			  etc
+		4. Interactive Elements:
+			= Alerts
+			= Collapse
+			= Accordions
+			= Spinners
+			= Toasts
+			  etc
+		5. Layout:
+			= Containers
+			= Grid system (Rows and Columns)
+			  etc
+		6. Utilities:
+			= Colors (Background and text colors)
+			= Spacing utilities
+			= Display utilities
+			= Flex utilities
+			= Visibility utilities
+			  etc
+			
+===========================================================================================================

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function submitForm()
+        {
+            var name = document.getElementById("name_tf").value;
+            var phno = document.getElementById("phno_tf").value;
+
+            if(name === "" || name === null)
+            {
+                alert("Name cannot be empty");
+                return false;
+            }
+            else if(name.length<3 || name.length>15)
+            {
+                alert("Name should contain 3 to 15 characters only");
+                return false;
+            }
+            else if(phno === "" || phno === null)
+            {
+                alert("Phone number cannot be empty");
+                return false;
+            }
+            else if(phno.length != 10)
+            {
+                alert("Phone number should contains only 10 digits");
+                return false;
+            }
+            else
+            {
+                document.regForm.action = "Register";
+                return true;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    
+    <form name="regForm" onsubmit="return submitForm()">
+        Name : <input type="text" id="name_tf" /> <br/> <br/>
+        Phone No. : <input type="text" id="phno_tf" /> <br/> <br/>
+        <button type="submit">Click Me</button>
+    </form>
+
+</body>
+</html>

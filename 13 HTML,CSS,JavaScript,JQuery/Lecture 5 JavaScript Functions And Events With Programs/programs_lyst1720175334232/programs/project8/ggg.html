@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div1_design, .div2_design
+        {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            margin: 20px;
+        }
+        .div1_design
+        {
+            background-color: yellow;
+        }
+        .div2_design
+        {
+            background-color: aqua;
+        }
+    </style>
+
+    <script>
+        function changeBg(bgcolor)
+        {
+            document.body.style.backgroundColor = bgcolor;
+        }
+    </script>
+
+</head>
+<body>
+    
+    <div class="div1_design" onmouseover="changeBg('yellow')" onmouseout="changeBg('transparent')"></div>
+
+    <div class="div2_design" onmouseover="changeBg('aqua')" onmouseout="changeBg('transparent')"></div>
+
+</body>
+</html>

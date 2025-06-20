@@ -1,0 +1,139 @@
+=> CSS (Cascading Style Sheets) :-
+	-> CSS is a langauge which is used to define styles, design and layout for web pages across different devices.
+	-> CSS separates content from presentation, making it easier to maintain and update web pages.
+	
+	-> CSS Syntax:
+		= Diagram
+	
+	-> How to add CSS in HTML:
+		1. Inline CSS:
+			= Styles are applied directly within HTML tags using the style attribute.
+		2. Internal CSS:
+			= Styles are defined within a <style> tag inside the <head> section of the HTML document.
+		3. External CSS:
+			= Styles are defined in a separate .css file and linked to the HTML document using a <link> tag.
+
+	-> CSS provides a lot of selectors which are as below:
+		1. Class Selector (.class)
+			= Targets elements with a specific class attribute.
+			= Example: .myClass
+		2. ID Selector (#id)
+			= Targets a single element with a specific ID attribute.
+			= Example: #myId
+		3. Element Selector (Tag Selector)
+			= Targets all elements of a specified type.
+			= Example: p
+		4. Descendant Selector (ancestor descendant)
+			= Targets elements that are descendants of a specified ancestor.
+			= Example: .container p
+		5. Child Selector (parent > child)
+			= Targets direct children of a specified parent element.
+			= Example: .container > p
+		---------------LESS USED---------------
+		6. Universal Selector (*)
+			= Targets all elements on the page.
+			= Example: *
+		7. Adjacent Sibling Selector (element + element)
+			= Targets an element that is immediately adjacent to a specified element.
+			= Example: h1 + p
+		8. General Sibling Selector (element ~ element)
+			= Targets all sibling elements of a specified element.
+			= Example: h1 ~ p
+		9. Attribute Selector
+			= Targets elements with a specific attribute.
+			= Example: [type="text"]
+		10. Group Selector (element1, element2, element3)
+			= Targets multiple elements with the same styles.
+			= Example: h1, h2, h3
+		11. Pseudo-class Selector
+			= Targets elements based on their state.
+			= Example: a:hover
+		12. Pseudo-element Selector
+			= Targets a specific part of an element.
+			= Example: p::first-line
+			
+	-> CSS properties can be categorized as below:
+		1. Typography
+			>> Font:
+				• font-family: Specifies the font family for text.
+				• font-size: Sets the size of the font.
+				• font-weight: Sets the weight (boldness) of the font.
+				• font-style: Specifies the style of the font (e.g., normal, italic).
+			>> Text:
+				• color: Sets the color of the text.
+				• text-align: Specifies the horizontal alignment of text (e.g., left, right, center, justify).
+				• text-decoration: Adds decoration to text (e.g., none, underline, overline, line-through).
+				• line-height: Sets the height of a line box.
+				• letter-spacing: Sets the space between characters in a text.
+				• text-transform: Controls the capitalization of text (e.g., uppercase, lowercase, capitalize).
+		2. Background and Borders
+			>> Background:
+				• background-color: Sets the background color of an element.
+				• background-image: Sets the background image of an element.
+				• background-size: Specifies the size of the background image (e.g., cover, contain).
+				• background-position: Sets the starting position of a background image.
+				• background-repeat: Specifies how background images are repeated (e.g., repeat, no-repeat).
+			>> Borders:
+				• border: Sets the border for all sides of an element.
+				• border-width: Sets the width of the border.
+				• border-style: Specifies the style of the border (e.g., solid, dashed, dotted).
+				• border-color: Sets the color of the border.
+				• border-radius: Defines the radius of the element's corners.
+		3. Color and Visuals
+			>> Colors:
+				• color: Sets the color of the text.
+				• background-color: Sets the background color of an element.
+				• opacity: Sets the opacity level for an element (transparency).
+			>> Shadows:
+				• box-shadow: Adds shadow effects around an element's frame.
+				• text-shadow: Adds shadow to text.
+		4. Layout and Positioning
+			>> Box Model:
+				• width and height: Specifies the width and height of an element.
+				• margin: Sets the outer margin of an element.
+				• padding: Sets the inner padding of an element.
+				• border: Sets the border of an element.
+				• box-sizing: Defines how the width and height of an element are calculated (content-box, border-box).
+			>> Display and Flexbox:
+				• display: Controls the display behavior of an element (e.g., block, inline, flex, grid).
+				• flex-direction: Specifies the direction of the flex container’s main axis (e.g., row, column).
+				• justify-content: Aligns flex items along the main axis (e.g., flex-start, center, space-between).
+				• align-items: Aligns flex items along the cross axis (e.g., flex-start, center, stretch).
+				• flex-wrap: Specifies whether flex items should wrap or not (e.g., nowrap, wrap).
+			>> Grid:
+				• display: grid;: Defines a grid container and establishes a new grid formatting context.
+				• grid-template-columns: Defines the columns of the grid with a space-separated list of values.
+				• grid-template-rows: Defines the rows of the grid with a space-separated list of values.
+				• gap: Sets the gaps (gutters) between rows and columns.
+			>> Positioning:
+				• position: Specifies the type of positioning method used for an element (e.g., static, relative, absolute, fixed, sticky).
+				• top, right, bottom, left: Specifies the offsets for positioned elements.
+				• z-index: Specifies the stack order of an element.
+		5. Transitions and Animations
+			>> Transitions:
+				• transition: A shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay.
+				• transition-property: Specifies the name of the CSS property the transition effect is for.
+				• transition-duration: Specifies how many seconds or milliseconds a transition effect takes to complete.
+				• transition-timing-function: Specifies the speed curve of the transition effect (e.g., ease, linear, ease-in).
+			>> Animations:
+				• animation: A shorthand property for animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, and animation-direction.
+				• animation-name: Specifies the name of the @keyframes animation.
+				• animation-duration: Specifies how many seconds or milliseconds an animation takes to complete one cycle.
+				• animation-timing-function: Specifies the speed curve of the animation (e.g., ease, linear, ease-in).
+				• animation-delay: Specifies a delay before the animation will start.
+		6. Responsive Design
+			>> Media Queries:
+				• @media: Used to apply different styles for different media types/devices.
+					Example:
+						@media (max-width: 600px) {
+						  .container {
+							flex-direction: column;
+						  }
+						}
+		7. Interactivity
+			>> Pseudo-classes and Pseudo-elements:
+				• :hover: Applies a style when the user hovers over an element.
+				• :focus: Applies a style when an element has focus.
+				• :before and :after: Inserts content before or after an element's content.
+				
+==============================================================================================================

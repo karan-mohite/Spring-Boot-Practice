@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #productDetailsDivId
+        {
+            display: none;
+        }
+    </style>
+
+    <script>
+        function getProductDetails(productId)
+        {
+            const productDiv = document.getElementById("productDetailsDivId");
+            if(productId === "0")
+            {
+                productDiv.style.display="none";
+            }
+
+            if(!window.XMLHttpRequest)
+            {
+                console.error("XMLHttpRequest object is not supported by your browser");
+                return;
+            }
+
+            const xhrObj = new XMLHttpRequest();
+            xhrObj.open("GET", "https://fakestoreapi.com/products/"+productId, true);
+            
+            xhrObj.addEventListener("load", function(){
+                if(xhrObj.status === 200)
+                {
+                    const jsonObj = JSON.parse(xhrObj.responseText);
+
+                    const productTitle = jsonObj.title;
+                    const productPrice = jsonObj.price;
+                    const productDesc = jsonObj.description;
+                    const productCategory = jsonObj.category;
+                    const productImg = jsonObj.image;
+
+                    document.getElementById("productTitleSpanId").innerText = productTitle;
+                    document.getElementById("productPriceSpanId").innerText = productPrice;
+                    document.getElementById("productDescSpanId").innerText = productDesc;
+                    document.getElementById("productCategorySpanId").innerText = productCategory;
+                    document.getElementById("productImgSpanId").src = productImg;
+
+                    productDiv.style.display="block";
+                }
+            });
+            
+            xhrObj.send();
+        }
+    </script>
+
+</head>
+<body>
+    
+    <select onchange="getProductDetails(this.value)">
+        <option value="0"> Select Product Id </option>
+        <option value="1"> 1 </option>
+        <option value="2"> 2 </option>
+        <option value="3"> 3 </option>
+        <option value="4"> 4 </option>
+        <option value="5"> 5 </option>
+        <option value="6"> 6 </option>
+        <option value="7"> 7 </option>
+        <option value="8"> 8 </option>
+        <option value="9"> 9 </option>
+        <option value="10"> 10 </option>
+    </select> <br/> <br/>
+
+    <div id="productDetailsDivId">
+        <strong> Title : </strong> <span id="productTitleSpanId"></span> <br/> <br/>
+        <strong> Price : </strong> <span id="productPriceSpanId"></span> <br/> <br/>
+        <strong> Description : </strong> <span id="productDescSpanId"></span> <br/> <br/>
+        <strong> Category : </strong> <span id="productCategorySpanId"></span> <br/> <br/>
+        <strong> Image : </strong> <img src="" alt="Product Image" id="productImgSpanId" height="200" width="200" /> <br/> <br/>
+    </div>
+
+</body>
+</html>

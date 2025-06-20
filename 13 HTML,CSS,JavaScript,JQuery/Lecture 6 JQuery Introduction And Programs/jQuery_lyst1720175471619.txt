@@ -1,0 +1,56 @@
+=> jQuery :-
+	-> jQuery is a freely available, open-source "JavaScript library".
+	-> It was initially released in 2006 by John Resig and has since become one of the most widely used JavaScript libraries.
+	-> Core Features of jQuery:
+		1. HTML manipulation
+		2. HTML event methods manipulation
+		3. CSS manipulation
+		4. DOM manipulation
+		5. DOM elements manipulation
+		6. AJAX manipulation
+		7. Effects and Animations
+		8. JSON parsing
+	
+	-> Benefits of Using jQuery:
+		1. It is very fast and lightweight.
+		2. For jQuery we can say, "write less do more".
+		3. jQuery is platform independent.
+		4. It offers a lot of plugins for various functionalities, from image carousels to form validation.
+		5. Good support for learning and troubleshooting with a lot of tutorials and docs.
+
+	-> How to use jQuery ?
+		1. Add jQuery library in our web page:
+			-> Download jQuery library
+					OR
+			-> Include jQuery from a CDN (Content Delivery Network) like jQuery Foundation CDN, Google CDN, Cloudflare CDN etc.
+		2. Syntax:
+			>> $(selector).action();
+			>> $ - we are defning or accessing jQuery
+			   selector - to find HTML elements
+			   action - action to be performed on html elements
+			>> For example:
+				$(document).ready(function(){
+					//code
+				});
+
+	-> jQuery Events:
+		1. Mouse Events:
+			= For example : click(), dblclick(), mouseenter(), mouseleave()
+		2. Keyboard Events:
+			= For example : keypress(), keydown(), keyup()
+		3. Form Events:
+			= For example : submit(), change(), focus(), blur()
+		4. Document/Window Events:
+			= For example : load(), resize(), scroll(), unload()
+			
+	-> jQuery Effects :-
+		1. Display Effect:
+			= For example : hide(), show(), toggle()
+		2. Fading Effect:
+			= For example : fadeIn(), fadeOut(), fadeToggle(), fadeTo()
+		3. Sliding Effect:
+			= For example : slideDown(), slideUp(), slideToggle()
+		4. Other Effect:
+			= For example : animate(), delay() etc....
+			
+==============================================================================================================

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div1_style, .div2_style
+        {
+            width: 100%;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        .div1_style
+        {
+            padding: 20px;
+            text-align: center;
+        }
+        .div2_style
+        {
+            height: 300px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".div1_style").click(function(){
+                // $(".div2_style").slideUp();
+                // $(".div2_style").slideUp("slow");
+                $(".div2_style").slideUp(2000);
+            });
+        });
+    </script>
+
+</head>
+<body>
+    
+    <div class="div1_style">Click Me</div>
+
+    <div class="div2_style"></div>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+=> JavaScript :-
+	-> JavaScript is a high-level, dynamic programming language used primarily for creating interactive web pages and applications.
+	-> It supports both client-side scripting for web development using HTML and CSS, and server-side scripting for backend development using Node.js.
+	
+	-> JavaScript was created by Brendan Eich at Netscape in 1995. Initially named "LiveScript", it was renamed to capitalize on Java's popularity at the time.
+	
+	-> Features of JavaScript:
+		1. JavaScript is a lightweight and interpreted language.
+		2. Almost all browsers support JavaScript.
+		3. JavaScript is a case-sensitive language.
+		4. JavaScript follows the syntax and structure similar to C programming language, making it a structured programming language.
+		5. JavaScript is an object-oriented programming language where objects inherit properties and methods directly from other objects rather than from classes.
+		
+	-> Use of JavaScript:
+		1. Web Development:
+			= Creating dynamic and interactive web pages.
+		2. Web Applications:
+			= Developing complex web applications, including single-page applications (SPAs).
+		3. Server-Side Applications:
+			= Using Node.js to build scalable network applications.
+		4. Mobile Applications:
+			= Using frameworks like React Native to develop cross-platform mobile applications.
+		5. Game Development:
+			= Creating browser-based games.
+		6. Desktop Applications:
+			= Developing desktop applications using frameworks like Electron.
+	-> NOTE :-
+		= At present we will use javascript only client-side scripting:
+			>> Pop-up Windows
+			>> Animations
+				- Animation sliders
+				- Zoom effects
+				- Animated galleries
+			>> Form Validations
+			>> Charts and Graphs
+			>> Calendar and Date/Time Pickers
+			>> Drop-down Menus
+			>> Maps
+			
+	-> Types Of JavaScript :
+		1. Internal JavaScript
+			= It is used inside the HTML <head> or <body> for embedding scripts.
+			= Syntax:
+				<script>
+					javascript_code
+				</script>
+		2. External JavaScript
+			= It is written in separate .js files and linked to the HTML file.
+			= Syntax:
+				<script src="path"></script>
+			= It separates HTML and JS code to increase readability and maintainability.
+			
+	-> Variables in JavaScript :
+		1. var
+		2. let
+		3. const
+	-> How to write variable name ?
+		= Correct ways ---- rollno, roll_no, roll-no, rollNo, rollno1
+		= Wrong way ---- roll no, 1rollno, roll+no
+
+	-> Data Types in JavaScript :
+		1. var a=10; - number
+		2. var a=12.5; - number
+		3. var a=true; - boolean
+		4. var a="hello"; - string
+		5. var a='hello' - string
+		6. var a=["deepak", "amit", "rahul"] - object
+		7. var a={name : "deepak", rollno : 101}; - object
+		8. var a=null; - object
+		9. var a; - undefined
+
+	-> JavaScript Operators : 
+		1. Arithmetic Operators (+,-,*,/,%)
+		2. Assignment Operators (=, +=, -=, *=, /=, %=)
+		3. Comparison Operators (==, !=, ===, !==, >, <, >=, <=)
+		4. Logical Operators (&&, ||, !)
+		5. Bitwise Operators (&, |, ^, ~, <<, >>)
+		6. Type Operators (typeOf, instanceOf)
+
+	-> JavaScript Control Statements : 
+		1. Selection Statements - if, if-else, if-else if, nested if, switch
+		2. Looping Statements - for, while, do-while, for-in
+		3. Break Statement - break, continue, return
+
+	-> JavaScript provides different categories of objects and APIs to interact with both the structure of web pages and the web browser environment:
+		1. DOM (Document Object Model):
+			= It focuses on the document content and structure to manipulate the web page.
+			= Examples of DOM objects: document, element, attribute etc.
+		2. BOM (Browser Object Model):
+			= It focuses on the browser window and functionalities to interact with the browser environment.
+			= Examples of BOM objects: window, console, history, location etc.
+	
+--------------------------------------------
+
+1. "document":
+	= It is an object that represents the HTML document loaded in the browser window.
+	= It provides properties and methods for accessing and manipulating the content, structure, and style of the document.
+	= Methods of document object are:
+		- write()
+		- getElementById(id)
+		- getElementsByClassName(className)
+		- createElement(tagName)
+		- getAttribute(name)
+		- setAttribute(name, value)
+		- querySelector(selector)
+		- querySelectorAll(selector)
+		etc
+	= Properties of document object are:
+		- innerHTML
+		- innerText
+		etc
+		
+2. "window":
+	= It is an object that represents the browser window or tab that contains the web page.
+	= It provides properties and methods for interacting with the browser environment.
+	= Methods of window object are:
+		- alert(message)
+		- confirm(message)
+		- prompt(message, defaultText)
+		- open(url, target, features)
+		- setInterval(function, milliseconds)
+		- clearInterval(intervalId)
+		etc
+	= Properties of window object are:
+		- innerHeight
+		- innerWidth
+		- outerHeight
+		- outerWidth
+		- location
+		etc
+		
+==============================================================================================================

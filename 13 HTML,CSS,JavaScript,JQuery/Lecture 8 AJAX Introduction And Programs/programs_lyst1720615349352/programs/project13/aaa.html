@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function getTxtFileData()
+        {
+            if(!window.XMLHttpRequest)
+            {
+                console.error("XMLHttpRequest is not supported by your browser");
+                return;
+            }
+
+            var xhrObj = new XMLHttpRequest();
+            xhrObj.open("GET", "data.txt", true);
+
+            xhrObj.onreadystatechange = function(){
+                if(xhrObj.readyState === 4 && xhrObj.status === 200)
+                {
+                    document.getElementById("spanDataId").innerHTML = xhrObj.responseText;
+                }
+            };
+
+            xhrObj.send();
+        }
+    </script>
+
+</head>
+<body>
+    
+    <button onclick="getTxtFileData()"> Click Me </button> <br/> <br/>
+    <span id="spanDataId"> -----data----- </span>
+
+</body>
+</html>

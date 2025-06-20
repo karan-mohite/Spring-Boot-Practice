@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function copyText()
+        {
+            document.getElementById("tf2").value = document.getElementById("tf1").value;
+        }
+    </script>
+
+</head>
+<body>
+    
+    <input type="text" id="tf1" onkeyup="copyText()" /> <br/> <br/>
+    <input type="text" id="tf2" />
+
+</body>
+</html>

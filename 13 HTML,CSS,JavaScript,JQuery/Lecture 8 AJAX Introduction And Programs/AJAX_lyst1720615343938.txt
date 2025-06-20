@@ -1,0 +1,67 @@
+=> AJAX (Asynchronous JavaScript and XML):
+	-> AJAX is a technique or set of technologies used to create dynamic web pages.
+	-> It allows developers to update webpages, request/receive data from servers and send data in the background without reloading the web page.
+	
+	-> AJAX is widely used in web development to enhance the user experience by allowing web pages to be updated asynchronously. Below are some common applications of AJAX:
+		1. Updating webpages without reloading:
+			= AJAX updates parts of a webpage without reloading the entire page (e.g. liking a post, updating a shopping cart).
+		2. Auto-complete suggestions:
+			= AJAX provides real-time suggestions in search bars (e.g. Google search suggestions, product recommendations).
+		3. Infinite scrolling:
+			= AJAX implements infinite scrolling, loading more content as users scroll down (e.g. social media feeds).
+		4. Form validation and submission:
+			= AJAX validates forms on the client-side before submission, improving user experience (e.g. checking email format).
+		5. Live content updates:
+			= AJAX updates content in real-time (e.g. chat messages, stock tickers, live sports scores).
+		etc
+	
+	-> NOTE:
+		= AJAX is not a programming language.
+		= Besides XML, AJAX can transport data in plain text, JSON, HTML etc.
+		
+	-> AJAX key technologies are:
+		1. XMLHttpRequest:
+			= It is a built-in browser object used to exchange data with the server without reloading the web page.
+		2. JavaScript(or jQuery) and HTML DOM:
+			= These are used to display or manipulate the data received.
+
+----------------------------------------------------------------------------------------------------
+
+=> XMLHttpRequest:
+
+	-> Methods:
+		1. open(method, url, async, username, password): Initializes the request.
+			= method: HTTP method (e.g., "GET", "POST").
+			= url: The URL of the resource to fetch.
+			= async (optional): Boolean indicating asynchronous (true) or synchronous (false) request. Defaults to true (asynchronous).
+			= username (optional): Username for authentication (if needed).
+			= password (optional): Password for authentication (if needed).
+		2. send(data): Sends the request to the server. Optional data argument for sending data with the request (e.g., for POST requests).
+		3. abort(): Cancels the current request.
+		4. setRequestHeader(name, value): Sets a request header for the request.
+		5. getAllResponseHeaders(): Returns all response headers as a string.
+		6. getResponseHeader(name): Returns a specific response header by name.
+
+	-> Properties:
+		1. readyState: Indicates the state of the request (0-4):
+			= 0: Unsent
+			= 1: Opened
+			= 2: Headers Received
+			= 3: Loading
+			= 4: Done
+		2. status: HTTP status code of the response (once the request is complete).
+		3. statusText: Text description of the HTTP status code.
+		4. responseText: Response data as a string (useful for plain text or JSON).
+		5. responseXML: Response data as an XML document (if applicable).
+
+	-> Event Types:
+		1. readystatechange: Triggered whenever the readyState property changes.
+		2. load: Triggered when the request completes successfully (when readyState is 4 and status is 200).
+		3, error: Triggered if the request encounters an error.
+		4. abort: Triggered when the request is aborted.
+		5. loadstart: Triggered when the request starts.
+		6. loadend: Triggered when the request has completed, regardless of success or failure.
+		7. progress: Triggered periodically during the request, as data is received.
+		8. timeout: Triggered if the request times out.
+		
+=============================================================================================================

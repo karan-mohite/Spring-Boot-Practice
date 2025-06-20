@@ -1,0 +1,96 @@
+=> HTML (Hyper Text Markup Language) :-
+	-> HTML is the markup-language that forms the foundation of web pages. In simple words we can say that HTML is the blueprint for a web page.
+	-> It defines the structure (layout) and content (text, links, images, videos etc) of a webpage.
+	
+	-> NOTE : HTML doesn't determine the look and feel (like colors or fonts). For this we use CSS.
+	
+	-> IDE or Code editors used for HTML (& CSS):
+		1. Visual Studio Code (VS Code)
+		2. Sublime Text
+		3. Atom
+		
+	-> HTML provides a lot of tags, which act as instructions for web browsers, written in angle brackets (< >)
+		= Diagram
+		
+	-> HTML Tags:
+		1. Basic Structure Tags
+			<!DOCTYPE>: Defines the document type and HTML version
+			<html>: Defines the root of an HTML document.
+			<head>: Contains meta-information about the document.
+			<body>: Defines the body of the document, containing the content.
+
+		2. Metadata and Linking Tags
+			<title>: Sets the title of the document.
+			<meta>: Provides metadata like character set, description, keywords.
+			<link>: Links external resources like CSS files.
+			<style>: Contains internal CSS styles.
+
+		3. Content Sectioning Tags
+			<header>: Defines a header for a document or section.
+			<nav>: Defines navigation links.
+			<main>: Defines the document's primary content
+			<aside>: Defines content aside from the main content, often used for sidebars.
+			<section>: Defines a section in a document.
+			<article>: Defines an independent, self-contained content.
+			<footer>: Defines a footer for a document or section.
+
+		3. Text Content Tags
+			<h1>, <h2>, <h3>, <h4>, <h5>, <h6>: Define HTML headings.
+			<p>: Defines a paragraph.
+			<a>: Defines a hyperlink.
+			<div>: Defines a division or section in a document.
+			<span>: Defines a section in a document for styling purposes.
+			<br>: Inserts a single line break.
+			<hr>: Defines a thematic break or creates a horizontal line to visually separate content in HTML.
+			<b>: Defines bold text.
+			<strong>: Defines the important text.
+			<i>: Defines italic text.
+			<em>: Emphasizes text (typically rendered as italic).
+			<del>: Represents deleted text (typically rendered as strikethrough).
+			<pre>: Defines preformatted text (preserves spaces and line breaks)
+			<big>: Defines text that is rendered one size larger than the normal text size.
+			<small>: Defines text that is rendered one size smaller than the normal text size.
+			<sup>: Defines superscript text, typically used for footnotes or exponents.
+			<sub>: Defines subscript text, often used for chemical formulas or mathematical expressions.
+
+		4. List Tags
+			<ul>: Defines an unordered list.
+			<ol>: Defines an ordered list.
+			<li>: Defines a list item.
+
+		5. Form Tags
+			<form>: Defines an HTML form for user input.
+			<input>: Defines an input control.
+			<label>: Defines a label for an input element.
+			<button>: Defines a clickable button.
+			
+		6. Table Tags
+			<table>: Defines a table.
+			<tr>: Defines a table row.
+			<th>: Defines a table header cell.
+			<td>: Defines a table cell.
+
+		7. Media Tags
+			<img>: Embeds an image.
+			<audio>: Embeds sound content.
+			<video>: Embeds video content.
+			
+		8. Other Tags
+			<!-- Comment here -->: Defines the comment which are not displayed in the browser
+			
+	-> NOTE :
+		= HTML tag and attribute names are case-insensitive, means we can use uppercase or lowercase. But best practice is to use lowercase to enhances code readability and maintains consistency.
+		= There are 2 types of tags i.e. Self-Closing Tags (<br/>, <hr/>, <link/> etc) and Non-Self-Closing Tags (<p>, <h1>, <div> etc)
+	
+	-> HTML also provides Character Entity References (CER), which are a way to represent characters that aren't directly available on a keyboard or might be confused with HTML syntax.
+	-> Some examples of CER are :-
+		1. &nbsp; (non-breaking space): Non-breaking space, prevents line breaks
+		2. &emsp; (em space): Em space, creates a wide space.
+		3. &ensp; (en space): En space, creates a narrow space.
+		4. &raquo; (right double angle quotation mark): Right double angle quotation mark (»).
+		5. &laquo; (left double angle quotation mark): Left double angle quotation mark («).
+		   etc
+		   
+	-> To check HTML syntax, we can use the website "https://validator.w3.org/".
+
+========================================================================================================

@@ -1,0 +1,94 @@
+=> JavaScript Function :-
+	-> A JavaScript function is a block of code designed to perform a particular task.
+	-> It is the fundamental building block in JavaScript, allowing us to define reusable code and encapsulate logic.
+	-> Syntax :-
+		function functionName(parameters)
+		{
+			// code to be executed
+		}
+	-> It is executed when something invokes (or calls) it.
+
+----------------------------------------------------------------------------------------
+
+=> JavaScript Events :-
+	-> JavaScript events are actions or occurrences that happen in the browser, which JavaScript can respond to.
+	-> For example :
+		= If we want to provide click event on button then below is the code
+		= <button onclick="handleClick()">Click me</button>
+		
+	-> Some important JavaScript events are as below:
+		1. Mouse Events
+			= click:
+				- Event Handler : onclick
+				- Description : Fired when the mouse is clicked on an element.
+			= dblclick:
+				- Event Handler : ondblclick
+				- Description : Fired when a pointing device button is clicked twice on a single element.
+			= mousedown:
+				- Event Handler : onmousedown
+				- Description : Fired when a pointing device button is pressed on an element.
+			= mouseup:
+				- Event Handler : onmouseup
+				- Description : Fired when a pointing device button is released over an element.
+			= mouseover:
+				- Event Handler : onmouseover
+				- Description : Fired when a pointing device is moved onto the element to which the event is attached.
+			= mouseout:
+				- Event Handler : onmouseout
+				- Description : Fired when a pointing device is moved off the element to which the event is attached.
+		2. Keyboard Events
+			= keydown:
+				- Event Handler : onkeydown
+				- Description : Fired when a key is pressed down.
+			= keyup:
+				- Event Handler : onkeyup
+				- Description : Fired when a key is released.
+		3. Form Events
+			= submit:
+				- Event Handler : onsubmit
+				- Description : Fired when a form is submitted.
+			= change:
+				- Event Handler : onchange
+				- Description : Fired for <input>, <select>, and <textarea> elements when the user commits a change to the element’s value.
+			= focus:
+				- Event Handler : onfocus
+				- Description : Fired when an element has received focus.
+			= blur:
+				- Event Handler : onblur
+				- Description : Fired when an element has lost focus.
+			= input:
+				- Event Handler : oninput
+				- Description : Fired synchronously when the value of an <input>, <select>, or <textarea> element is changed.
+		4. Window Events
+			= load:
+				- Event Handler : onload
+				- Description : Fired when the whole page has loaded, including all dependent resources such as stylesheets and images.
+			= resize:
+				- Event Handler : onresize
+				- Description : Fired when the document view is resized.
+			= scroll:
+				- Event Handler : onscroll
+				- Description : Fired when the document view or an element has been scrolled.
+		etc
+	-> NOTE :-
+		= In JavaScript, all standard event handler attributes in HTML start with the prefix "on"
+		= We can also attach event handlers by using methods such as addEventListener, which do not use the "on" prefix
+			>> document.getElementById('myButton').addEventListener('click', handleClick);
+			
+==============================================================================================================
+
+=> Some important JavaScript libraries are :-
+	-> jQuery
+	-> Lodash
+	-> Axios
+	-> D3.js
+	   etc
+	
+=> Some important JavaScript frameworks are :-
+	-> React
+	-> Angular
+	-> Vue.js
+	-> Ember.js
+	-> Node.js (technically not a framework, its a runtime environment for executing JavaScript code outside of a web browser)
+
+===============================================================================================================

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            function getUserDetails(user_id)
+            {
+                $.ajax({
+                    type: "GET",
+                    url: "https://fakestoreapi.com/users/"+user_id,
+
+                    success: function(response){
+                        if(response !== null)
+                        {
+                            const user_name = response.username;
+                            const email = response.email;
+                            const fullname = response.name.firstname+" "+response.name.lastname;
+
+                            const str = "<strong> User Details </strong> <br/>"+
+                                        "Name : "+fullname+"<br/>"+
+                                        "Username : "+user_name+"<br/>"+
+                                        "Email : "+email+"<br/>";
+
+                            $("#userDetailsSpanId").html(str);
+                        }
+                        else
+                        {
+                            $("#userDetailsSpanId").html("<strong> User Not Found </strong>");
+                        }
+                    },
+
+                    error: function(xhrObj, status, error){
+                        console.error("Request Failed : ", status, error);
+                    }
+                });
+            }
+
+            $("#userId").on("input", function(){
+                const user_id = $(this).val();
+                if(user_id !== "")
+                {
+                    getUserDetails(user_id);
+                }
+                else
+                {
+                    $("#userDetailsSpanId").empty();
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <input type="text" placeholder="Enter User Id" id="userId" /> <br/> <br/>
+    <span id="userDetailsSpanId"> ---- User Data ---- </span>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function hideParagraph()
+        {
+            document.getElementById("paraId").style.visibility = "hidden";
+        }
+        function showParagraph()
+        {
+            document.getElementById("paraId").style.visibility = "visible";
+        }
+    </script>
+
+</head>
+<body>
+    
+    <p id="paraId"">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illo hic! Iste obcaecati dolore reiciendis praesentium sit repudiandae iusto aliquam ex velit, hic fugiat, culpa, ipsum sapiente corrupti ut quaerat.
+    </p>
+
+    <button onclick="hideParagraph()"> Hide </button>
+    <button onclick="showParagraph()"> Show </button>
+
+</body>
+</html>
