@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="purchaseCourse()">Pay with Razorpay</button>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        function purchaseCourse()
+        {
+            var options = {
+                "key": "rzp_test_5MvmFPiJ6ZxL25", // Enter the Key ID generated from the Dashboard
+                "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                "currency": "INR",
+                "name": "Smart Programming",
+                "description": "Course Transaction",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO67FwD9X8RUcz06z5OZto0lNs4QqwOKTcFA&s",
+                "handler": function (response){
+                    console.log(response);
+                    alert("Payment Successful");
+                },
+                "prefill": {
+                    "name": "Gaurav Kumar",
+                    "email": "gaurav.kumar@example.com",
+                    "contact": "9000090000"
+                },
+                "notes": {
+                    "courseName": "----"
+                },
+                "theme": {
+                    "color": "#3399cc"
+                }
+            };
+
+            var rzp1 = new Razorpay(options);
+
+            rzp1.on('payment.failed', function (response){
+                    console.log(response);
+                    alert("Error : "+response);
+            });
+
+            rzp1.open();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+=> TASK :-
+	1. Designs of :-
+		= Employee Login
+		= Employee Profile
+		= Employee Side-Menubar
+			- My Profile
+			- Sell Course
+			- Inquiry Management
+			- Follow-Ups
+			- Logout
+		= Sell Course
+		= Inquiry Management
+	2. Backend of :-
+		= Employee Login
+		= Employee Profile
+		= Employee Logout
+		
+==============================================================================================================

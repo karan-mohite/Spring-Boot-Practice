@@ -1,0 +1,69 @@
+=> Pagination in Springboot:
+	-> For pagination in Springboot we use 2 interfaces:
+		1. Pageable
+		2. Page
+		
+---------------------------------------------------------------------------------
+
+=> Pageable :-
+	-> Pagable is an interface which is used to specify pagination information, such as page number, page size, and sorting order, when querying the database.
+	-> Methods:
+		1. int getPageNumber():
+			= Returns the current page number.
+		2. int getPageSize():
+			= Returns the size of the page to be returned.
+		3. Sort getSort():
+			= Returns the sorting parameters.
+		4. Pageable next():
+			= Returns the next Pageable instance.
+		5. Pageable previousOrFirst():
+			= Returns the previous Pageable instance or the first one if the current one is the first.
+		6. Pageable first():
+			= Returns a Pageable instance representing the first page.
+	-> Properties:
+		1. pageNumber:
+			= The page number to be retrieved.
+		2. pageSize:
+			= The number of items per page.
+		3. sort:
+			= The sorting parameters for the query.
+
+---------------------------------------------------------------------------------------------------
+=> Page :-
+	-> Page is an interface which represents a chunk of data that is fetched according to the pagination parameters defined by Pageable. It contains the actual content (data) and metadata about the pagination.
+	-> Methods:
+		1. List<T> getContent():
+			= Returns the list of entities in the current page.
+		2. int getNumber():
+			= Returns the current page number.
+		3. int getSize():
+			= Returns the size of the page.
+		4. int getTotalPages():
+			= Returns the total number of pages.
+		5. long getTotalElements():
+			= Returns the total number of elements.
+		6. boolean hasNext():
+			= Returns whether there is a next page.
+		7. boolean hasPrevious():
+			= Returns whether there is a previous page.
+		8. boolean isFirst():
+			= Returns whether this is the first page.
+		9. boolean isLast():
+			= Returns whether this is the last page.
+	-> Properties:
+		1. content:
+			= The list of entities fetched for the current page.
+		2. number:
+			= The current page number (zero-based).
+		3. size:
+			= The size of the page.
+		4. totalPages:
+			= The total number of pages.
+		5. totalElements:
+			= The total number of elements available.
+		6. first:
+			= Indicates if the current page is the first page.
+		7. last:
+			= Indicates if the current page is the last page.
+			
+=============================================================================================================

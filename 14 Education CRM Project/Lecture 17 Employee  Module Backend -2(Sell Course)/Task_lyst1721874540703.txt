@@ -1,0 +1,6 @@
+=> TASK :-
+	= If user has purchased the course then that course should display start course button, not buy button
+	= Store the values that which employee sold the course to the customer
+	= Set proper date of purchase format in javascript
+	
+===========================================================================================================
