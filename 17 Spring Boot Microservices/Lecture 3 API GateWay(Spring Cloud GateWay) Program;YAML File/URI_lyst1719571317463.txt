@@ -1,0 +1,10 @@
+ORDER : http://localhost:8082/orders/101
+
+
+USER : http://localhost:8081/user/111
+
+
+API Gateway : http://localhost:8080/orders/101
+	      http://localhost:8080/user/111
+
+==============================================================

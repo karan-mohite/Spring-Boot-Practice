@@ -1,0 +1,85 @@
+=> There are 2 key concepts in Spring Boot :-
+	1. Microservices
+	2. Microservices Architecture
+	
+-------------------------------------------------------------------------------------------------------
+
+=> Microservices Architecture :-
+	-> Microservices Architecture is an approach or style to develop an application.
+	-> The core idea behind the application development is to create small, independent components (microservices) that perform specific, simple tasks. These microservices are then combined or integrated to build a larger, more complex application.
+	-> Some other architectural patterns used in industry are:
+		1. Client-Server Architecture
+		2. Model-View-Controller (MVC) Architecture
+		3. Monolithic Architecture
+		4. Layered Architecture
+		5. Event-Driven Architecture (EDA)
+		   etc
+	
+	-> Advantages of Microservices Architecture:
+		• Scalability:
+			= Each microservice can be scaled independently based on its load.
+		• Flexibility in Technology:
+			= Different services can use different technologies, best suited for the task.
+		• Fault Isolation:
+			= Failure in one microservice does not necessarily bring down the whole system.
+		• Independent Deployment:
+			= Services can be deployed independently, allowing for faster releases and updates.
+		• Improved Development Speed:
+			= Teams can develop, test and deploy services independently, leading to faster development cycles.
+		• Maintainability:
+			= Smaller codebases are easier to understand, maintain and modify.
+		etc
+	
+	-> Spring Boot Microservices Architecture Flow Diagram :-
+		= Diagram
+	
+	-> Spring Boot Microservices Architecture Flow Explanation :-
+		1. Client:
+			= A client is a software application or user interface that interacts with backend services or APIs to retrieve and manipulate data.
+			= For example Web Application, Mobile App or Another Microservice
+			= Client sends the requests to the API Gateway, which then routes them to the appropriate microservices and then receives responses from the API Gateway and presents them to the user.
+		2. API Gateway:
+			= An API Gateway is a single entry point for clients to access backend services and APIs.
+			= For example Spring Cloud Gateway, Zuul (by Netflix), Consul etc
+			= It can provide some additional features like security, load balancing, request transformation, rate limiting, caching, logging, monitoring, health checks, and distributed tracing for enhanced performance and reliability.
+		3. Service Discovery Server:
+			= A Service Discovery Server is a central registry which allows microservices to register themselves and discover other services dynamically, without the need for hardcoded network configurations.
+			= When a microservice needs to call another service, it consults the service discovery server to find its location (e.g., hostname and port). This eliminates the need to hardcode service addresses, allowing for dynamic scaling and changes in service locations without reconfiguring client or service code.
+			= For example Eureka, Zookeeper etc
+		4. Microservices:
+			= Microservices refers to small, independent services that each handle a specific piece of business functionality within an application.
+			= Microservices are independently deployable, scalable, and maintainable, allowing teams to develop, deploy, and scale each service independently.
+			= For example User Service, Product Service etc
+			
+		5. Others (Optional but recommended for real world applications):
+			>> Configuration Management:
+				= It is the centralized repository for managing configuration properties (database URLs, API keys, etc.) for all microservices.
+				= We can use Spring Cloud Config Server to provide configuration properties centrally
+			>> Resilience (Fault Tolerance):
+				= It is the system's ability to continue functioning despite the occurrence of failures or errors, ensuring uninterrupted operation and resilience against disruptions.
+				= For this we can use Spring Cloud Circuit Breaker (built on top of resilience4j) or Hystrix (library developed by Netflix).
+			>> Application Health Monitoring:
+				= It involves continuously monitoring the performance and health of microservices to identify potential issues and ensure smooth operation.
+				= For this purpose we can use Spring Boot Actuators, Prometheus, Datadog etc
+			>> Request Flow Monitoring :
+				= It helped track requests across multiple microservices, providing valuable insights into how requests flow through the system.
+				= For this purpose we can use Micrometer Tracing or Zipkin
+			>> Containerization and Orchestration:
+				= Containerization is packaging our application with all its dependencies into a container for consistent deployment. We use Docker for containerization.
+				= Orchestration automates the deployment, scaling, and management of containerized applications. We can use Kubernetes for Orchestration.
+				= We can also use Podman, Docker Swarm, and Amazon ECS for Containerization and Orchestration
+			>> Security:
+				= Security is crucial in microservices architectures to protect against unauthorized access, data breaches, and other threats.
+				= For this we can use Spring Cloud Security, OAuth2, JWT etc
+			>> Logging:
+				= We can centralize logging aggregates logs from all microservices into a single system, enabling efficient troubleshooting, debugging, and analysis of system behavior.
+				= For this we can use ELK Stack (Elasticsearch, Logstash, Kibana), Splunk, Sumo Logic etc
+			>> Testing:
+				= We can develop unit and integration tests for microservices to ensure proper functionality and communication. This promotes code quality and reduces the risk of regressions.
+				= For this we can use JUnit, Mockito, Spring Boot Test etc
+			>> API Documentation:
+				= We can provide clear and comprehensive API documentation for each microservice. This documentation should explain the available endpoints, request/response formats, and usage guidelines. Clear API documentation empowers developers to understand and integrate with your microservices more effectively.
+			>> Infrastructure:
+				= Another consideration is to use cloud-based deployments using platforms like AWS, Azure, or GCP for scalability, flexibility, and automated management. These platforms offer services for container orchestration, monitoring, and logging that can streamline our microservices deployment and operation.
+
+=======================================================================================================

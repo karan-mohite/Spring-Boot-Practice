@@ -1,0 +1,27 @@
+=> There are 2 key concepts in Spring Boot :-
+	1. Microservices
+	2. Microservices Architecture
+	
+--------------------------------------------------------------------------------------------------------
+
+=> Microservices :-
+	-> Microservices refers to small, independent services that each handle a specific piece of business functionality within an application.
+	
+	-> Characteristics of Microservices:
+		= Microservices are developed, deployed, and scaled independently.
+		= Microservices are building blocks of microservices architecture.
+		= Microservices are developed using RESTful Web Services or APIs.
+	
+	-> Advantages of Microservices:
+		1. Focused Teams
+			= Teams can concentrate on a specific functionality, leading to better code quality and expertise.
+		2. Better Resource Utilization
+			= Services can be deployed on different servers or containers, optimizing resource usage.
+		3. Simplified Testing
+			= Smaller services are easier to test in isolation.
+		4. Enhanced Security:
+			= Microservices can be isolated in terms of security, reducing the impact of a breach.
+		5. Technology-Neutral
+			= Microservices can be developed within different technologies, best suited for the task.
+
+========================================================================================================

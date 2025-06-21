@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: MicroserviceApiGateway1
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      routes:
+      - predicates:
+        - Path=/user/**
+        uri:
+          http://localhost:8081
+        
+      - predicates:
+        - Path=/orders/**
+        uri:
+          http://localhost:8082
+    
+server:
+  port: 8080
